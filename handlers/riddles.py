@@ -1,5 +1,8 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
+from aiogram.filters import StateFilter
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
 from keyboards import riddles_menu, back_button
 from data import user_data
 from questions import question_bank
@@ -8,8 +11,10 @@ import logging
 router = Router()
 logger = logging.getLogger(__name__)
 
-# Временное хранение текущих загадок для пользователей
-user_riddles = {}
+
+class RiddleState(StatesGroup):
+    """Состояния для игры в загадки."""
+    waiting_answer = State()
 
 @router.callback_query(F.data == "riddles")
 async def riddles_menu_callback(callback: CallbackQuery):
@@ -21,15 +26,16 @@ async def riddles_menu_callback(callback: CallbackQuery):
     await callback.answer()
 
 @router.callback_query(F.data.startswith("riddles:"))
-async def riddle_handler(callback: CallbackQuery):
+async def riddle_handler(callback: CallbackQuery, state: FSMContext):
     """Обработчик загадок"""
     riddle_type = callback.data.split(":")[1]
     user_id = callback.from_user.id
 
     try:
-        # Получаем загадку
+        # Получаем загадку и сохраняем в состоянии
         riddle = question_bank.get_riddle(riddle_type)
-        user_riddles[user_id] = riddle
+        await state.set_state(RiddleState.waiting_answer)
+        await state.update_data(riddle=riddle)
 
         riddle_text = f"""
 🧩 <b>Загадка</b>
@@ -53,19 +59,20 @@ async def riddle_handler(callback: CallbackQuery):
         )
         await callback.answer()
 
-@router.message(F.text)
-async def handle_riddle_answer(message: Message):
+@router.message(StateFilter(RiddleState.waiting_answer), F.text)
+async def handle_riddle_answer(message: Message, state: FSMContext):
     """Обработчик ответов на загадки"""
     user_id = message.from_user.id
 
-    # Проверяем, есть ли активная загадка для пользователя
-    if user_id not in user_riddles:
-        return
-
-    riddle = user_riddles[user_id]
-    user_answer = message.text.lower().strip()
-
     try:
+        data = await state.get_data()
+        riddle = data.get("riddle")
+        if not riddle:
+            await state.clear()
+            return
+
+        user_answer = message.text.lower().strip()
+
         # Проверяем ответ
         correct_answers = [ans.lower() for ans in riddle["a"]]
         is_correct = user_answer in correct_answers
@@ -109,13 +116,13 @@ async def handle_riddle_answer(message: Message):
             await message.answer(response_text)
             return
 
-        # Удаляем загадку из памяти только при правильном ответе
-        del user_riddles[user_id]
-
+        # Очищаем состояние после правильного ответа
+        await state.clear()
         await message.answer(response_text, reply_markup=riddles_menu())
 
     except Exception as e:
         logger.error(f"Ошибка при обработке ответа на загадку: {e}")
+        await state.clear()
         await message.answer(
             "❌ Произошла ошибка при обработке ответа.",
             reply_markup=riddles_menu()
@@ -126,28 +133,37 @@ async def show_riddle_hint(callback: CallbackQuery):
     """Показать подсказку к загадке"""
     user_id = callback.from_user.id
 
-    if user_id not in user_riddles:
-        await callback.answer("Сначала выбери загадку!")
-        return
-
-    riddle = user_riddles[user_id]
-    hint = riddle.get('hint', 'Подсказки нет')
-
-    await callback.answer(f"💡 Подсказка: {hint}", show_alert=True)
+    try:
+        data = await state.get_data()
+        riddle = data.get("riddle")
+        if not riddle:
+            await callback.answer("Сначала выбери загадку!")
+            return
+        hint = riddle.get('hint', 'Подсказки нет')
+        await callback.answer(f"💡 Подсказка: {hint}", show_alert=True)
+    except Exception as e:
+        logger.error(f"Ошибка при показе подсказки: {e}")
+        await state.clear()
+        await callback.answer("Ошибка", show_alert=True)
 
 @router.callback_query(F.data == "riddle_skip")
 async def skip_riddle(callback: CallbackQuery):
     """Пропустить текущую загадку"""
     user_id = callback.from_user.id
 
-    if user_id in user_riddles:
-        riddle = user_riddles[user_id]
+    try:
+        data = await state.get_data()
+        riddle = data.get("riddle")
+        if not riddle:
+            await callback.answer("Сначала выбери загадку!")
+            return
+
         correct_answer = riddle["a"][0]
 
         # Убираем очки за пропуск
         await user_data.update_score(user_id, -1)
 
-        del user_riddles[user_id]
+        await state.clear()
 
         text = f"""
 ⏭️ <b>Загадка пропущена</b>
@@ -161,5 +177,9 @@ async def skip_riddle(callback: CallbackQuery):
 """
 
         await callback.message.edit_text(text, reply_markup=riddles_menu())
+    except Exception as e:
+        logger.error(f"Ошибка при пропуске загадки: {e}")
+        await state.clear()
+        await callback.answer("Ошибка", show_alert=True)
 
     await callback.answer()
