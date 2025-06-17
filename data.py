@@ -4,7 +4,7 @@ import aiofiles
 from datetime import datetime, timedelta
 from pathlib import Path
 import logging
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +34,7 @@ class UserData:
                 async with aiofiles.open(self.path, 'r', encoding='utf-8') as f:
                     content = await f.read()
                     self.data = json.loads(content)
-                    logger.info(f"Загружены данные для {len(self.data)} пользователей")
+                logger.info(f"Загружены данные для {len(self.data)} пользователей")
             else:
                 self.data = {}
                 logger.info("Создан новый файл данных")
@@ -43,29 +43,40 @@ class UserData:
             self.data = {}
 
     async def save(self):
-        """Асинхронное сохранение данных"""
+        """Асинхронное сохранение данных с резервным копированием"""
         async with self._lock:
+            backup_path = self.path.with_suffix('.bak')
             try:
-                # Создаем резервную копию
+                # Удаляем старый бэкап, если есть
+                if backup_path.exists():
+                    backup_path.unlink()
+                # Создаем новую копию
                 if self.path.exists():
-                    backup_path = self.path.with_suffix('.bak')
                     self.path.rename(backup_path)
 
+                # Записываем данные
                 async with aiofiles.open(self.path, 'w', encoding='utf-8') as f:
                     await f.write(json.dumps(self.data, indent=2, ensure_ascii=False))
 
                 logger.debug("Данные сохранены")
+
+                # Удаляем бэкап после успешной записи
+                if backup_path.exists():
+                    backup_path.unlink()
+
             except Exception as e:
                 logger.error(f"Ошибка сохранения данных: {e}")
-                # Восстанавливаем из резервной копии
-                backup_path = self.path.with_suffix('.bak')
+                # Восстанавливаем из бэкапа
                 if backup_path.exists():
+                    if self.path.exists():
+                        self.path.unlink()
                     backup_path.rename(self.path)
 
     def ensure_user(self, user_id: int) -> Dict[str, Any]:
         """Создание пользователя если не существует"""
         uid = str(user_id)
         if uid not in self.data:
+            now = datetime.now().isoformat()
             self.data[uid] = {
                 "score": 0,
                 "answered": 0,
@@ -77,8 +88,8 @@ class UserData:
                 "last_day": "",
                 "max_streak": 0,
                 "achievements": [],
-                "created_at": datetime.now().isoformat(),
-                "last_activity": datetime.now().isoformat(),
+                "created_at": now,
+                "last_activity": now,
                 "total_time_played": 0,
                 "favorite_category": "",
                 "level": 1
@@ -90,8 +101,6 @@ class UserData:
         user = self.ensure_user(user_id)
         user[field] += amount
         user["last_activity"] = datetime.now().isoformat()
-
-        # Проверка достижений
         await self._check_achievements(user_id)
         await self.save()
 
@@ -102,69 +111,52 @@ class UserData:
     async def add_achievement(self, user_id: int, achievement_key: str) -> bool:
         """Добавление достижения пользователю"""
         user = self.ensure_user(user_id)
-        achievement_name = self._achievements.get(achievement_key, achievement_key)
-
-        if achievement_name not in user["achievements"]:
-            user["achievements"].append(achievement_name)
+        name = self._achievements.get(achievement_key, achievement_key)
+        if name not in user["achievements"]:
+            user["achievements"].append(name)
             await self.save()
-            logger.info(f"Пользователь {user_id} получил достижение: {achievement_name}")
+            logger.info(f"Пользователь {user_id} получил достижение: {name}")
             return True
         return False
 
     async def update_streak(self, user_id: int) -> tuple[int, bool]:
         """Обновление серии ответов пользователя"""
         user = self.ensure_user(user_id)
-        now = datetime.now().date()
-        today = now.isoformat()
-        last_day = user["last_day"]
-
-        streak_updated = False
-
-        if last_day != today:
-            if last_day == (now - timedelta(days=1)).isoformat():
-                # Продолжаем серию
-                user["streak"] += 1
-                streak_updated = True
-            else:
-                # Начинаем новую серию
-                user["streak"] = 1
-                streak_updated = True
-
+        today = datetime.now().date().isoformat()
+        last = user["last_day"]
+        updated = False
+        if last != today:
+            yesterday = (datetime.now().date() - timedelta(days=1)).isoformat()
+            user["streak"] = user["streak"] + 1 if last == yesterday else 1
             user["last_day"] = today
             user["max_streak"] = max(user["max_streak"], user["streak"])
             await self.save()
-
-        return user["streak"], streak_updated
+            updated = True
+        return user["streak"], updated
 
     async def _check_achievements(self, user_id: int):
-        """Проверка и добавление достижений"""
         user = self.data[str(user_id)]
-
-        # Достижения за очки
+        # Очки
         if user["score"] >= 1000:
             await self.add_achievement(user_id, "score_1000")
         elif user["score"] >= 500:
             await self.add_achievement(user_id, "score_500")
         elif user["score"] >= 100:
             await self.add_achievement(user_id, "score_100")
-
-        # Достижения за серии
+        # Серии
         if user["streak"] >= 30:
             await self.add_achievement(user_id, "streak_30")
         elif user["streak"] >= 7:
             await self.add_achievement(user_id, "streak_7")
         elif user["streak"] >= 3:
             await self.add_achievement(user_id, "streak_3")
-
-        # Достижения за активность
+        # Активность
         if user["correct"] >= 50:
             await self.add_achievement(user_id, "quiz_master")
         elif user["answered"] >= 1:
             await self.add_achievement(user_id, "first_answer")
-
         if user["riddles_solved"] >= 20:
             await self.add_achievement(user_id, "riddle_solver")
-
         if user["words_guessed"] >= 10:
             await self.add_achievement(user_id, "word_champion")
 
@@ -174,45 +166,31 @@ class UserData:
 
     def get_leaderboard(self, limit: int = 10) -> list:
         """Получение таблицы лидеров"""
-        sorted_users = sorted(
-            self.data.items(),
-            key=lambda x: x[1]["score"],
-            reverse=True
-        )
-        return sorted_users[:limit]
+        return sorted(self.data.items(), key=lambda x: x[1]["score"], reverse=True)[:limit]
 
     async def get_stats_summary(self) -> Dict[str, Any]:
-        """Получение общей статистики"""
         if not self.data:
             return {"total_users": 0}
-
         total_users = len(self.data)
-        total_score = sum(user["score"] for user in self.data.values())
-        total_answers = sum(user["answered"] for user in self.data.values())
-        avg_score = total_score / total_users if total_users > 0 else 0
-
+        total_score = sum(u["score"] for u in self.data.values())
+        total_answers = sum(u["answered"] for u in self.data.values())
+        avg = total_score / total_users if total_users else 0
         return {
             "total_users": total_users,
             "total_score": total_score,
             "total_answers": total_answers,
-            "average_score": round(avg_score, 2)
+            "average_score": round(avg, 2)
         }
 
 # Глобальный экземпляр
 user_data = UserData()
 
-# Инициализация при импорте модуля
 async def init_data():
     await user_data.load()
 
 # Автоматическая инициализация
 try:
-    import asyncio
-    loop = asyncio.get_event_loop()
-    if loop.is_running():
-        asyncio.create_task(init_data())
-    else:
-        asyncio.run(init_data())
+    asyncio.get_running_loop()
+    asyncio.create_task(init_data())
 except RuntimeError:
-    # Если цикл событий не запущен, инициализация произойдет позже
-    pass
+    asyncio.run(init_data())

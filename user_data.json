@@ -1,0 +1,40 @@
+{
+  "1009310689": {
+    "score": 38,
+    "answered": 30,
+    "correct": 16,
+    "games_played": 43,
+    "riddles_solved": 0,
+    "words_guessed": 0,
+    "streak": 0,
+    "last_day": "2025-06-17",
+    "max_streak": 1,
+    "achievements": [
+      "🎯 Первый ответ"
+    ],
+    "created_at": "2025-06-17T20:25:26.507038",
+    "last_activity": "2025-06-17T20:36:02.985965",
+    "total_time_played": 0,
+    "favorite_category": "",
+    "level": 1
+  },
+  "7001360877": {
+    "score": 5,
+    "answered": 3,
+    "correct": 2,
+    "games_played": 0,
+    "riddles_solved": 0,
+    "words_guessed": 0,
+    "streak": 0,
+    "last_day": "2025-06-17",
+    "max_streak": 1,
+    "achievements": [
+      "🎯 Первый ответ"
+    ],
+    "created_at": "2025-06-17T20:38:01.294132",
+    "last_activity": "2025-06-17T20:38:24.352986",
+    "total_time_played": 0,
+    "favorite_category": "",
+    "level": 1
+  }
+}

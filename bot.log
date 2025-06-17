@@ -1,0 +1,900 @@
+2025-06-17 20:18:03,372 - __main__ - ERROR - Критическая ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:18:03,373 - __main__ - ERROR - Неожиданная ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:18:26,801 - __main__ - ERROR - Критическая ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:18:26,803 - __main__ - ERROR - Неожиданная ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:20:37,419 - __main__ - ERROR - Критическая ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:20:37,419 - __main__ - ERROR - Неожиданная ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:24:00,348 - __main__ - ERROR - Критическая ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:24:00,349 - __main__ - ERROR - Неожиданная ошибка: BOT_TOKEN не найден! Установите переменную окружения или создайте .env файл
+2025-06-17 20:25:26,302 - __main__ - INFO - Начинаю polling...
+2025-06-17 20:25:26,302 - __main__ - INFO - Бот запускается...
+2025-06-17 20:25:26,302 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 20:25:26,450 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 20:25:26,846 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 20:25:26,846 - aiogram.event - INFO - Update id=926862367 is handled. Duration 344 ms by bot id=7576088488
+2025-06-17 20:25:56,281 - aiogram.event - INFO - Update id=926862368 is handled. Duration 421 ms by bot id=7576088488
+2025-06-17 20:26:01,227 - aiogram.event - INFO - Update id=926862369 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 20:26:02,437 - aiogram.event - INFO - Update id=926862370 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:26:03,688 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:03,688 - handlers.games - ERROR - Ошибка в игре dice: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:03,828 - aiogram.event - INFO - Update id=926862371 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:26:05,026 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:05,026 - handlers.games - ERROR - Ошибка в игре dice: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:05,134 - aiogram.event - INFO - Update id=926862372 is not handled. Duration 108 ms by bot id=7576088488
+2025-06-17 20:26:05,134 - aiogram.event - ERROR - Cause exception while process update id=926862372 by bot id=7576088488
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\handlers\games.py", line 28, in game_handler
+    await play_dice(callback, user_id)
+  File "D:\telegram_quiz_bot\handlers\games.py", line 65, in play_dice
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 46, in game_handler
+    await callback.message.edit_text(
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:26:11,773 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:11,773 - handlers.games - ERROR - Ошибка в игре coin: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:11,830 - aiogram.event - INFO - Update id=926862373 is not handled. Duration 61 ms by bot id=7576088488
+2025-06-17 20:26:11,830 - aiogram.event - ERROR - Cause exception while process update id=926862373 by bot id=7576088488
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\handlers\games.py", line 30, in game_handler
+    await play_coin(callback, user_id)
+  File "D:\telegram_quiz_bot\handlers\games.py", line 93, in play_coin
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 46, in game_handler
+    await callback.message.edit_text(
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:26:13,483 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:13,483 - handlers.games - ERROR - Ошибка в игре roulette: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:13,545 - aiogram.event - INFO - Update id=926862374 is not handled. Duration 61 ms by bot id=7576088488
+2025-06-17 20:26:13,545 - aiogram.event - ERROR - Cause exception while process update id=926862374 by bot id=7576088488
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\handlers\games.py", line 32, in game_handler
+    await play_roulette(callback, user_id)
+  File "D:\telegram_quiz_bot\handlers\games.py", line 131, in play_roulette
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 46, in game_handler
+    await callback.message.edit_text(
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:26:14,453 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:14,453 - handlers.games - ERROR - Ошибка в игре number: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:14,513 - aiogram.event - INFO - Update id=926862375 is not handled. Duration 61 ms by bot id=7576088488
+2025-06-17 20:26:14,513 - aiogram.event - ERROR - Cause exception while process update id=926862375 by bot id=7576088488
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\handlers\games.py", line 34, in game_handler
+    await play_number_guess(callback, user_id)
+  File "D:\telegram_quiz_bot\handlers\games.py", line 161, in play_number_guess
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 46, in game_handler
+    await callback.message.edit_text(
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:26:14,745 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:14,745 - handlers.games - ERROR - Ошибка в игре double_dice: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:14,807 - aiogram.event - INFO - Update id=926862376 is not handled. Duration 61 ms by bot id=7576088488
+2025-06-17 20:26:14,807 - aiogram.event - ERROR - Cause exception while process update id=926862376 by bot id=7576088488
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\handlers\games.py", line 38, in game_handler
+    await play_double_dice(callback, user_id)
+  File "D:\telegram_quiz_bot\handlers\games.py", line 201, in play_double_dice
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 46, in game_handler
+    await callback.message.edit_text(
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:26:15,216 - aiogram.event - INFO - Update id=926862377 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:26:17,171 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:17,171 - aiogram.event - INFO - Update id=926862378 is not handled. Duration 15 ms by bot id=7576088488
+2025-06-17 20:26:17,171 - aiogram.event - ERROR - Cause exception while process update id=926862378 by bot id=7576088488
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 251, in rps_game
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:17,465 - data - ERROR - Ошибка сохранения данных: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+2025-06-17 20:26:17,466 - aiogram.event - INFO - Update id=926862379 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:26:17,466 - aiogram.event - ERROR - Cause exception while process update id=926862379 by bot id=7576088488
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\data.py", line 52, in save
+    self.path.rename(backup_path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.json' -> 'user_data.bak'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\games.py", line 251, in rps_game
+    await user_data.update_score(user_id, points)
+  File "D:\telegram_quiz_bot\data.py", line 100, in update_score
+    await self.update_stat(user_id, "score", delta)
+  File "D:\telegram_quiz_bot\data.py", line 96, in update_stat
+    await self.save()
+  File "D:\telegram_quiz_bot\data.py", line 63, in save
+    backup_path.rename(self.path)
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1363, in rename
+    os.rename(self, target)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'user_data.bak' -> 'user_data.json'
+2025-06-17 20:26:18,792 - aiogram.event - INFO - Update id=926862380 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:26:20,432 - aiogram.event - INFO - Update id=926862381 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:26:29,313 - aiogram.event - INFO - Update id=926862382 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:26:30,785 - aiogram.event - INFO - Update id=926862383 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 20:26:40,250 - aiogram.event - INFO - Update id=926862384 is handled. Duration 14 ms by bot id=7576088488
+2025-06-17 20:26:50,847 - aiogram.event - INFO - Update id=926862385 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 20:26:51,728 - aiogram.event - INFO - Update id=926862386 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:26:54,994 - aiogram.event - INFO - Update id=926862387 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:26:58,570 - aiogram.event - INFO - Update id=926862388 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:27:03,429 - aiogram.event - INFO - Update id=926862389 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:29:12,020 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 20:29:12,020 - __main__ - INFO - Бот останавливается...
+2025-06-17 20:29:12,275 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 20:29:12,276 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 20:29:21,473 - __main__ - INFO - Начинаю polling...
+2025-06-17 20:29:21,475 - __main__ - INFO - Бот запускается...
+2025-06-17 20:29:21,475 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 20:29:21,621 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 20:29:34,864 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 20:29:34,864 - aiogram.event - INFO - Update id=926862390 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 20:29:36,699 - aiogram.event - INFO - Update id=926862391 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:29:37,856 - aiogram.event - INFO - Update id=926862392 is handled. Duration 313 ms by bot id=7576088488
+2025-06-17 20:29:44,229 - aiogram.event - INFO - Update id=926862393 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:29:49,668 - aiogram.event - INFO - Update id=926862394 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 20:29:52,886 - aiogram.event - INFO - Update id=926862395 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:29:57,085 - aiogram.event - INFO - Update id=926862396 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 20:30:02,591 - aiogram.event - INFO - Update id=926862397 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 20:30:23,577 - aiogram.event - INFO - Update id=926862398 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 20:30:34,091 - aiogram.event - INFO - Update id=926862399 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:30:37,883 - aiogram.event - INFO - Update id=926862400 is handled. Duration 405 ms by bot id=7576088488
+2025-06-17 20:30:40,972 - aiogram.event - INFO - Update id=926862401 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:30:42,533 - aiogram.event - INFO - Update id=926862402 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 20:30:45,529 - aiogram.event - INFO - Update id=926862403 is handled. Duration 63 ms by bot id=7576088488
+2025-06-17 20:30:47,116 - aiogram.event - INFO - Update id=926862404 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 20:30:51,903 - aiogram.event - INFO - Update id=926862405 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 20:30:53,472 - aiogram.event - INFO - Update id=926862406 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 20:30:56,414 - aiogram.event - INFO - Update id=926862407 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:30:57,969 - aiogram.event - INFO - Update id=926862408 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:31:02,353 - aiogram.event - INFO - Update id=926862409 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:31:04,107 - aiogram.event - INFO - Update id=926862410 is handled. Duration 265 ms by bot id=7576088488
+2025-06-17 20:31:08,973 - aiogram.event - INFO - Update id=926862411 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:31:11,300 - aiogram.event - INFO - Update id=926862412 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 20:31:13,474 - aiogram.event - INFO - Update id=926862413 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 20:31:15,103 - aiogram.event - INFO - Update id=926862414 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:31:19,185 - aiogram.event - INFO - Update id=926862415 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 20:31:21,774 - aiogram.event - INFO - Update id=926862416 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:31:42,124 - aiogram.event - INFO - Update id=926862417 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:31:44,808 - aiogram.event - INFO - Update id=926862418 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:31:48,503 - aiogram.event - INFO - Update id=926862419 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:31:50,730 - aiogram.event - INFO - Update id=926862420 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:31:55,952 - aiogram.event - INFO - Update id=926862421 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 20:32:00,393 - aiogram.event - INFO - Update id=926862422 is handled. Duration 281 ms by bot id=7576088488
+2025-06-17 20:32:04,658 - aiogram.event - INFO - Update id=926862423 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:32:12,800 - aiogram.event - INFO - Update id=926862424 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:32:15,742 - aiogram.event - INFO - Update id=926862425 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 20:32:17,352 - aiogram.event - INFO - Update id=926862426 is handled. Duration 422 ms by bot id=7576088488
+2025-06-17 20:32:19,689 - aiogram.event - INFO - Update id=926862427 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:32:22,190 - aiogram.event - INFO - Update id=926862428 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:32:35,565 - aiogram.event - INFO - Update id=926862429 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:32:41,775 - aiogram.event - INFO - Update id=926862430 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:32:46,793 - aiogram.event - INFO - Update id=926862431 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:32:55,780 - aiogram.event - INFO - Update id=926862432 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:33:02,189 - aiogram.event - INFO - Update id=926862433 is handled. Duration 234 ms by bot id=7576088488
+2025-06-17 20:33:04,919 - aiogram.event - INFO - Update id=926862434 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:33:07,905 - aiogram.event - INFO - Update id=926862435 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 20:33:09,345 - aiogram.event - INFO - Update id=926862436 is handled. Duration 313 ms by bot id=7576088488
+2025-06-17 20:33:14,225 - aiogram.event - INFO - Update id=926862437 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:33:16,331 - aiogram.event - INFO - Update id=926862438 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:33:22,937 - aiogram.event - INFO - Update id=926862439 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:33:24,700 - aiogram.event - INFO - Update id=926862440 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:34:03,714 - aiogram.event - INFO - Update id=926862441 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:34:06,404 - aiogram.event - INFO - Update id=926862442 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 20:34:10,837 - aiogram.event - INFO - Update id=926862443 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:34:12,790 - aiogram.event - INFO - Update id=926862444 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 20:34:16,215 - aiogram.event - INFO - Update id=926862445 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 20:34:18,081 - aiogram.event - INFO - Update id=926862446 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:34:22,021 - aiogram.event - INFO - Update id=926862447 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 20:34:23,817 - aiogram.event - INFO - Update id=926862448 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:34:27,481 - aiogram.event - INFO - Update id=926862449 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 20:34:30,728 - aiogram.event - INFO - Update id=926862450 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:34:35,712 - aiogram.event - INFO - Update id=926862451 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 20:34:37,946 - aiogram.event - INFO - Update id=926862452 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:34:40,473 - aiogram.event - INFO - Update id=926862453 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 20:34:43,385 - aiogram.event - INFO - Update id=926862454 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:34:49,084 - aiogram.event - INFO - Update id=926862455 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 20:34:52,022 - aiogram.event - INFO - Update id=926862456 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:34:53,737 - aiogram.event - INFO - Update id=926862457 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:34:54,820 - aiogram.event - INFO - Update id=926862458 is handled. Duration 313 ms by bot id=7576088488
+2025-06-17 20:34:56,265 - aiogram.event - INFO - Update id=926862459 is handled. Duration 375 ms by bot id=7576088488
+2025-06-17 20:34:57,346 - aiogram.event - INFO - Update id=926862460 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:35:00,057 - aiogram.event - INFO - Update id=926862461 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:35:01,173 - aiogram.event - INFO - Update id=926862462 is handled. Duration 311 ms by bot id=7576088488
+2025-06-17 20:35:02,253 - aiogram.event - INFO - Update id=926862463 is handled. Duration 296 ms by bot id=7576088488
+2025-06-17 20:35:03,574 - aiogram.event - INFO - Update id=926862464 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:35:04,790 - aiogram.event - INFO - Update id=926862465 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 20:35:05,433 - aiogram.event - INFO - Update id=926862466 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:35:06,362 - aiogram.event - INFO - Update id=926862467 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 20:35:08,676 - aiogram.event - INFO - Update id=926862468 is handled. Duration 327 ms by bot id=7576088488
+2025-06-17 20:35:10,250 - aiogram.event - INFO - Update id=926862469 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 20:35:12,142 - aiogram.event - INFO - Update id=926862470 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:35:13,147 - aiogram.event - INFO - Update id=926862471 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:14,057 - aiogram.event - INFO - Update id=926862472 is handled. Duration 202 ms by bot id=7576088488
+2025-06-17 20:35:14,852 - aiogram.event - INFO - Update id=926862473 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:35:17,053 - aiogram.event - INFO - Update id=926862474 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:35:20,300 - aiogram.event - INFO - Update id=926862475 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:35:21,359 - handlers.games - ERROR - Ошибка в игре coin: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:35:21,476 - aiogram.event - INFO - Update id=926862476 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 20:35:22,839 - aiogram.event - INFO - Update id=926862477 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:35:24,323 - aiogram.event - INFO - Update id=926862478 is handled. Duration 265 ms by bot id=7576088488
+2025-06-17 20:35:24,938 - aiogram.event - INFO - Update id=926862479 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:27,096 - aiogram.event - INFO - Update id=926862480 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:27,748 - aiogram.event - INFO - Update id=926862481 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:28,404 - aiogram.event - INFO - Update id=926862482 is handled. Duration 235 ms by bot id=7576088488
+2025-06-17 20:35:29,130 - aiogram.event - INFO - Update id=926862483 is handled. Duration 296 ms by bot id=7576088488
+2025-06-17 20:35:29,777 - aiogram.event - INFO - Update id=926862484 is handled. Duration 266 ms by bot id=7576088488
+2025-06-17 20:35:30,463 - aiogram.event - INFO - Update id=926862485 is handled. Duration 297 ms by bot id=7576088488
+2025-06-17 20:35:31,026 - aiogram.event - INFO - Update id=926862486 is handled. Duration 203 ms by bot id=7576088488
+2025-06-17 20:35:34,884 - aiogram.event - INFO - Update id=926862487 is handled. Duration 405 ms by bot id=7576088488
+2025-06-17 20:35:36,340 - aiogram.event - INFO - Update id=926862488 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:36,945 - aiogram.event - INFO - Update id=926862489 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:35:37,485 - aiogram.event - INFO - Update id=926862490 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:38,178 - aiogram.event - INFO - Update id=926862491 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 20:35:40,376 - aiogram.event - INFO - Update id=926862492 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:35:45,161 - aiogram.event - INFO - Update id=926862493 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 20:35:46,514 - aiogram.event - INFO - Update id=926862494 is handled. Duration 202 ms by bot id=7576088488
+2025-06-17 20:35:50,035 - aiogram.event - INFO - Update id=926862495 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:50,881 - aiogram.event - INFO - Update id=926862496 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 20:35:51,893 - aiogram.event - INFO - Update id=926862497 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:52,568 - aiogram.event - INFO - Update id=926862498 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:53,574 - aiogram.event - INFO - Update id=926862499 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:54,489 - aiogram.event - INFO - Update id=926862500 is handled. Duration 203 ms by bot id=7576088488
+2025-06-17 20:35:55,439 - aiogram.event - INFO - Update id=926862501 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:35:59,198 - aiogram.event - INFO - Update id=926862502 is handled. Duration 313 ms by bot id=7576088488
+2025-06-17 20:36:00,794 - aiogram.event - INFO - Update id=926862503 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:36:03,131 - aiogram.event - INFO - Update id=926862504 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 20:36:04,397 - aiogram.event - INFO - Update id=926862505 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 20:36:06,577 - aiogram.event - INFO - Update id=926862506 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:36:08,513 - aiogram.event - INFO - Update id=926862507 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:36:27,932 - aiogram.event - INFO - Update id=926862508 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:36:43,210 - aiogram.event - INFO - Update id=926862509 is handled. Duration 359 ms by bot id=7576088488
+2025-06-17 20:36:44,511 - aiogram.event - INFO - Update id=926862510 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:36:48,167 - aiogram.event - INFO - Update id=926862511 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:36:49,715 - aiogram.event - INFO - Update id=926862512 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:36:52,633 - aiogram.event - INFO - Update id=926862513 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 20:36:57,141 - aiogram.event - INFO - Update id=926862514 is handled. Duration 188 ms by bot id=7576088488
+2025-06-17 20:36:57,944 - aiogram.event - INFO - Update id=926862515 is handled. Duration 359 ms by bot id=7576088488
+2025-06-17 20:36:59,199 - aiogram.event - INFO - Update id=926862516 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:37:00,690 - aiogram.event - INFO - Update id=926862517 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:37:05,683 - aiogram.event - INFO - Update id=926862518 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:37:08,317 - aiogram.event - INFO - Update id=926862519 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:37:10,305 - aiogram.event - INFO - Update id=926862520 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 20:37:13,307 - aiogram.event - INFO - Update id=926862521 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:37:18,210 - aiogram.event - INFO - Update id=926862522 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:37:23,157 - aiogram.event - INFO - Update id=926862523 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:37:24,152 - aiogram.event - INFO - Update id=926862524 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:37:25,525 - aiogram.event - INFO - Update id=926862525 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:37:26,929 - aiogram.event - INFO - Update id=926862526 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:38:01,465 - handlers.main - INFO - Пользователь 7001360877 (rtpaf) запустил бота
+2025-06-17 20:38:01,465 - aiogram.event - INFO - Update id=926862527 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 20:38:03,600 - aiogram.event - INFO - Update id=926862528 is handled. Duration 188 ms by bot id=7576088488
+2025-06-17 20:38:05,584 - aiogram.event - INFO - Update id=926862529 is handled. Duration 234 ms by bot id=7576088488
+2025-06-17 20:38:06,715 - aiogram.event - INFO - Update id=926862530 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:38:07,923 - aiogram.event - INFO - Update id=926862531 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 20:38:11,896 - aiogram.event - INFO - Update id=926862532 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 20:38:13,733 - aiogram.event - INFO - Update id=926862533 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 20:38:17,449 - aiogram.event - INFO - Update id=926862534 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:38:19,034 - aiogram.event - INFO - Update id=926862535 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 20:38:24,436 - aiogram.event - INFO - Update id=926862536 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 20:38:29,046 - aiogram.event - INFO - Update id=926862537 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 20:38:30,269 - aiogram.event - INFO - Update id=926862538 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:38:32,325 - aiogram.event - INFO - Update id=926862539 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:38:41,408 - aiogram.event - INFO - Update id=926862540 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 20:38:42,430 - aiogram.event - INFO - Update id=926862541 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:38:43,903 - aiogram.event - INFO - Update id=926862542 is handled. Duration 141 ms by bot id=7576088488
+2025-06-17 20:38:47,510 - aiogram.event - INFO - Update id=926862543 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 20:38:48,793 - aiogram.event - INFO - Update id=926862544 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:39:03,494 - aiogram.event - INFO - Update id=926862545 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:39:06,090 - aiogram.event - INFO - Update id=926862546 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 20:39:18,053 - aiogram.event - INFO - Update id=926862548 is not handled. Duration 280 ms by bot id=7576088488
+2025-06-17 20:39:18,053 - aiogram.event - ERROR - Cause exception while process update id=926862548 by bot id=7576088488
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\main.py", line 83, in back_to_main
+    await callback.message.edit_text(
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-06-17 20:39:18,106 - aiogram.event - INFO - Update id=926862547 is handled. Duration 422 ms by bot id=7576088488
