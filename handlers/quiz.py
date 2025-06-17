@@ -1,5 +1,6 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
+from aiogram.filters import BaseFilter  # +++
 from keyboards import quiz_menu, back_button
 from data import user_data
 from questions import question_bank, Difficulty, Category, check_answer
@@ -11,6 +12,15 @@ logger = logging.getLogger(__name__)
 
 # Временное хранение текущих вопросов для пользователей
 user_questions = {}
+
+# --------------------------------------------------------------------------- #
+#                              ДОБАВЛЕН ФИЛЬТР                                #
+# --------------------------------------------------------------------------- #
+class HasActiveQuiz(BaseFilter):
+    """Фильтр: у пользователя есть активный вопрос викторины"""
+    async def __call__(self, message: Message) -> bool:
+        return message.from_user.id in user_questions
+# --------------------------------------------------------------------------- #
 
 @router.callback_query(F.data == "quiz")
 async def quiz_menu_callback(callback: CallbackQuery):
@@ -78,15 +88,15 @@ async def quiz_handler(callback: CallbackQuery):
         )
         await callback.answer()
 
-@router.message(F.text)
+# --------------------------------------------------------------------------- #
+#            ОБНОВЛЁН ДЕКОРАТОР: ДОБАВЛЕН ФИЛЬТР HasActiveQuiz                #
+# --------------------------------------------------------------------------- #
+@router.message(HasActiveQuiz(), F.text)
 async def handle_quiz_answer(message: Message):
     """Обработчик ответов на вопросы викторины"""
     user_id = message.from_user.id
 
-    # Проверяем, есть ли активный вопрос для пользователя
-    if user_id not in user_questions:
-        return
-
+    # Проверка более не нужна – фильтр гарантирует наличие вопроса
     question = user_questions[user_id]
     user_answer = message.text.strip()
 

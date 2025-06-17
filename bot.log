@@ -898,3 +898,930 @@ Traceback (most recent call last):
     raise TelegramBadRequest(method=method, message=description)
 aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
 2025-06-17 20:39:18,106 - aiogram.event - INFO - Update id=926862547 is handled. Duration 422 ms by bot id=7576088488
+2025-06-17 20:43:37,996 - aiogram.event - INFO - Update id=926862549 is handled. Duration 297 ms by bot id=7576088488
+2025-06-17 20:43:40,266 - aiogram.event - INFO - Update id=926862550 is handled. Duration 141 ms by bot id=7576088488
+2025-06-17 20:43:42,611 - aiogram.event - INFO - Update id=926862551 is handled. Duration 281 ms by bot id=7576088488
+2025-06-17 20:43:43,190 - aiogram.event - INFO - Update id=926862552 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 20:43:46,595 - aiogram.event - INFO - Update id=926862553 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:43:47,702 - aiogram.event - INFO - Update id=926862554 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 20:43:56,005 - aiogram.event - INFO - Update id=926862555 is handled. Duration 108 ms by bot id=7576088488
+2025-06-17 20:43:57,544 - aiogram.event - INFO - Update id=926862556 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 21:37:56,107 - aiogram.event - INFO - Update id=926862557 is handled. Duration 359 ms by bot id=7576088488
+2025-06-17 21:40:42,839 - aiogram.event - INFO - Update id=926862558 is handled. Duration 297 ms by bot id=7576088488
+2025-06-17 21:40:46,337 - aiogram.event - INFO - Update id=926862559 is handled. Duration 389 ms by bot id=7576088488
+2025-06-17 21:40:56,141 - aiogram.event - INFO - Update id=926862560 is handled. Duration 202 ms by bot id=7576088488
+2025-06-17 21:40:57,681 - aiogram.event - INFO - Update id=926862561 is handled. Duration 422 ms by bot id=7576088488
+2025-06-17 21:41:14,816 - aiogram.event - INFO - Update id=926862562 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:41:19,263 - aiogram.event - INFO - Update id=926862563 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:41:21,257 - aiogram.event - INFO - Update id=926862564 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 21:41:22,734 - aiogram.event - INFO - Update id=926862565 is handled. Duration 204 ms by bot id=7576088488
+2025-06-17 21:41:23,428 - aiogram.event - INFO - Update id=926862566 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:41:28,526 - aiogram.event - INFO - Update id=926862567 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:41:29,917 - aiogram.event - INFO - Update id=926862568 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:41:30,809 - aiogram.event - INFO - Update id=926862569 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:41:31,315 - aiogram.event - INFO - Update id=926862570 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:53:27,877 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 21:53:27,877 - __main__ - INFO - ��� ���������������...
+2025-06-17 21:53:28,145 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 21:53:28,146 - __main__ - INFO - ��� ���������� �������������
+2025-06-17 21:53:34,023 - __main__ - INFO - ������� polling...
+2025-06-17 21:53:34,023 - __main__ - INFO - ��� �����������...
+2025-06-17 21:53:34,023 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 21:53:34,184 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 21:53:41,468 - handlers.main - INFO - ������������ 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) �������� ����
+2025-06-17 21:53:41,468 - aiogram.event - INFO - Update id=926862571 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 21:53:44,388 - aiogram.event - INFO - Update id=926862572 is handled. Duration 359 ms by bot id=7576088488
+2025-06-17 21:53:45,926 - aiogram.event - INFO - Update id=926862573 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 21:53:47,078 - aiogram.event - INFO - Update id=926862574 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 21:54:07,562 - aiogram.event - INFO - Update id=926862575 is not handled. Duration 15 ms by bot id=7576088488
+2025-06-17 21:54:10,040 - aiogram.event - INFO - Update id=926862576 is handled. Duration 327 ms by bot id=7576088488
+2025-06-17 21:54:12,723 - aiogram.event - INFO - Update id=926862577 is handled. Duration 280 ms by bot id=7576088488
+2025-06-17 21:54:14,694 - aiogram.event - INFO - Update id=926862578 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 21:54:15,501 - aiogram.event - INFO - Update id=926862579 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 21:54:17,224 - aiogram.event - INFO - Update id=926862580 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:54:26,208 - aiogram.event - INFO - Update id=926862581 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 21:54:34,722 - aiogram.event - INFO - Update id=926862582 is handled. Duration 280 ms by bot id=7576088488
+2025-06-17 21:54:35,706 - aiogram.event - INFO - Update id=926862583 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 21:54:39,567 - aiogram.event - INFO - Update id=926862584 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:19,895 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 21:56:19,895 - __main__ - INFO - ��� ���������������...
+2025-06-17 21:56:20,073 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2685)
+2025-06-17 21:56:20,073 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7576088488)
+2025-06-17 21:56:20,165 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 21:56:20,166 - __main__ - INFO - ��� ���������� �������������
+2025-06-17 21:56:30,007 - __main__ - INFO - ������� polling...
+2025-06-17 21:56:30,007 - __main__ - INFO - ��� �����������...
+2025-06-17 21:56:30,007 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 21:56:30,157 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 21:56:34,979 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 21:56:35,241 - aiogram.event - INFO - Update id=926862585 is handled. Duration 265 ms by bot id=7576088488
+2025-06-17 21:56:36,125 - handlers.word_game - INFO - Word handler triggered with data: word:short
+2025-06-17 21:56:36,125 - handlers.word_game - INFO - Got word: ���
+2025-06-17 21:56:36,125 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 21:56:36,287 - aiogram.event - INFO - Update id=926862586 is handled. Duration 170 ms by bot id=7576088488
+2025-06-17 21:56:37,716 - aiogram.event - INFO - Update id=926862587 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:39,518 - aiogram.event - INFO - Update id=926862588 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:40,568 - aiogram.event - INFO - Update id=926862589 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:41,237 - aiogram.event - INFO - Update id=926862590 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:41,960 - aiogram.event - INFO - Update id=926862591 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:42,529 - aiogram.event - INFO - Update id=926862592 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:56:43,493 - aiogram.event - INFO - Update id=926862593 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 21:57:00,573 - aiogram.event - INFO - Update id=926862594 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 22:01:47,213 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:01:47,213 - __main__ - INFO - ��� ���������������...
+2025-06-17 22:01:47,475 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:01:47,476 - __main__ - INFO - ��� ���������� �������������
+2025-06-17 22:04:27,993 - __main__ - INFO - ������� polling...
+2025-06-17 22:04:27,993 - __main__ - INFO - ��� �����������...
+2025-06-17 22:04:27,993 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:04:28,177 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:04:32,737 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:04:33,173 - aiogram.event - INFO - Update id=926862595 is handled. Duration 437 ms by bot id=7576088488
+2025-06-17 22:04:33,946 - handlers.word_game - INFO - Word handler triggered with data: word:short
+2025-06-17 22:04:33,946 - handlers.word_game - INFO - Got word: ����
+2025-06-17 22:04:33,946 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:04:34,166 - aiogram.event - INFO - Update id=926862596 is handled. Duration 217 ms by bot id=7576088488
+2025-06-17 22:04:36,809 - aiogram.event - INFO - Update id=926862597 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 22:05:04,810 - aiogram.event - INFO - Update id=926862598 is handled. Duration 0 ms by bot id=7576088488
+2025-06-17 22:05:06,139 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:05:06,353 - aiogram.event - INFO - Update id=926862599 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 22:05:07,551 - handlers.word_game - INFO - Word handler triggered with data: word:hard
+2025-06-17 22:05:07,551 - handlers.word_game - INFO - Got word: ����������
+2025-06-17 22:05:07,551 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:05:07,709 - aiogram.event - INFO - Update id=926862600 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 22:05:17,663 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:05:17,780 - aiogram.event - INFO - Update id=926862601 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 22:06:21,787 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:06:21,787 - __main__ - INFO - ��� ���������������...
+2025-06-17 22:06:22,048 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:06:22,048 - __main__ - INFO - ��� ���������� �������������
+2025-06-17 22:07:50,652 - __main__ - INFO - ������� polling...
+2025-06-17 22:07:50,653 - __main__ - INFO - ��� �����������...
+2025-06-17 22:07:50,653 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:07:50,805 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:07:59,345 - handlers.word_game - INFO - Word handler triggered with data: word:short
+2025-06-17 22:07:59,345 - handlers.word_game - INFO - Got word: ���
+2025-06-17 22:07:59,345 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:07:59,764 - aiogram.event - INFO - Update id=926862602 is handled. Duration 405 ms by bot id=7576088488
+2025-06-17 22:08:02,976 - aiogram.event - INFO - Update id=926862603 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 22:08:02,976 - aiogram.event - ERROR - Cause exception while process update id=926862603 by bot id=7576088488
+SkipHandler: 
+Traceback (most recent call last):
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\telegram_quiz_bot\handlers\quiz.py", line 97, in handle_quiz_answer
+    raise SkipHandler
+handlers.quiz.SkipHandler
+2025-06-17 22:09:33,088 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:09:33,088 - __main__ - INFO - ��� ���������������...
+2025-06-17 22:09:33,342 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:09:33,342 - __main__ - INFO - ��� ���������� �������������
+2025-06-17 22:09:38,334 - __main__ - INFO - ������� polling...
+2025-06-17 22:09:38,334 - __main__ - INFO - ��� �����������...
+2025-06-17 22:09:38,334 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:09:38,522 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:09:47,118 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:09:47,383 - aiogram.event - INFO - Update id=926862604 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 22:09:51,973 - handlers.word_game - INFO - Word handler triggered with data: word:hard
+2025-06-17 22:09:51,973 - handlers.word_game - INFO - Got word: ������������
+2025-06-17 22:09:51,973 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:09:52,126 - aiogram.event - INFO - Update id=926862605 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 22:09:53,375 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:09:53,723 - aiogram.event - INFO - Update id=926862606 is handled. Duration 359 ms by bot id=7576088488
+2025-06-17 22:09:54,168 - handlers.word_game - INFO - Word handler triggered with data: word:random
+2025-06-17 22:09:54,168 - handlers.word_game - INFO - Got word: ����������
+2025-06-17 22:09:54,168 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:09:54,466 - aiogram.event - INFO - Update id=926862607 is handled. Duration 297 ms by bot id=7576088488
+2025-06-17 22:10:00,250 - handlers.word_game - INFO - Processing guess: '��������' from user 1009310689
+2025-06-17 22:10:00,250 - handlers.word_game - INFO - Game state - word: ����������, attempts: 6
+2025-06-17 22:10:00,362 - aiogram.event - INFO - Update id=926862608 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 22:10:14,865 - handlers.word_game - INFO - Processing guess: '������������' from user 1009310689
+2025-06-17 22:10:14,865 - handlers.word_game - INFO - Game state - word: ����������, attempts: 5
+2025-06-17 22:10:14,938 - aiogram.event - INFO - Update id=926862609 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:10:20,302 - handlers.word_game - INFO - Processing guess: '����������' from user 1009310689
+2025-06-17 22:10:20,302 - handlers.word_game - INFO - Game state - word: ����������, attempts: 4
+2025-06-17 22:10:20,377 - aiogram.event - INFO - Update id=926862610 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 22:11:02,693 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:11:02,965 - aiogram.event - INFO - Update id=926862611 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 22:11:04,594 - handlers.word_game - INFO - Word handler triggered with data: word:hard
+2025-06-17 22:11:04,594 - handlers.word_game - INFO - Got word: ����������
+2025-06-17 22:11:04,595 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:11:04,917 - aiogram.event - INFO - Update id=926862612 is handled. Duration 327 ms by bot id=7576088488
+2025-06-17 22:11:14,955 - handlers.word_game - INFO - Processing guess: '����������' from user 1009310689
+2025-06-17 22:11:14,955 - handlers.word_game - INFO - Game state - word: ����������, attempts: 6
+2025-06-17 22:11:15,054 - aiogram.event - INFO - Update id=926862613 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 22:11:49,695 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:11:49,696 - __main__ - INFO - ��� ���������������...
+2025-06-17 22:11:49,949 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:11:49,949 - __main__ - INFO - ��� ���������� �������������
+2025-06-17 22:11:52,192 - __main__ - INFO - Начинаю polling...
+2025-06-17 22:11:52,192 - __main__ - INFO - Бот запускается...
+2025-06-17 22:11:52,192 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:11:52,380 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:11:55,308 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:11:55,858 - aiogram.event - INFO - Update id=926862614 is handled. Duration 546 ms by bot id=7576088488
+2025-06-17 22:11:56,640 - handlers.word_game - INFO - Word handler triggered with data: word:short
+2025-06-17 22:11:56,640 - handlers.word_game - INFO - Got word: дар
+2025-06-17 22:11:56,640 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:11:56,819 - aiogram.event - INFO - Update id=926862615 is handled. Duration 188 ms by bot id=7576088488
+2025-06-17 22:11:59,005 - handlers.word_game - INFO - Processing guess: 'дом' from user 1009310689
+2025-06-17 22:11:59,005 - handlers.word_game - INFO - Game state - word: дар, attempts: 6
+2025-06-17 22:11:59,082 - handlers.word_game - INFO - Sent response: ❌ Неверно. Осталось попыток: <b>5</b>
+Слово: ___
+2025-06-17 22:11:59,082 - aiogram.event - INFO - Update id=926862616 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:12:04,367 - handlers.word_game - INFO - Processing guess: 'дар' from user 1009310689
+2025-06-17 22:12:04,367 - handlers.word_game - INFO - Game state - word: дар, attempts: 5
+2025-06-17 22:12:04,520 - handlers.word_game - INFO - Sent response: 🎉 Поздравляю! Ты угадал слово <b>дар</b> и заработал <b>5</b> очков.
+2025-06-17 22:12:04,520 - aiogram.event - INFO - Update id=926862617 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 22:12:11,741 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:12:11,862 - aiogram.event - INFO - Update id=926862618 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:12:12,725 - handlers.word_game - INFO - Word handler triggered with data: word:short
+2025-06-17 22:12:12,726 - handlers.word_game - INFO - Got word: лес
+2025-06-17 22:12:12,726 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:12:12,840 - aiogram.event - INFO - Update id=926862619 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 22:12:15,323 - handlers.word_game - INFO - Processing guess: 'хер' from user 1009310689
+2025-06-17 22:12:15,323 - handlers.word_game - INFO - Game state - word: лес, attempts: 6
+2025-06-17 22:12:15,396 - handlers.word_game - INFO - Sent response: ❌ Неверно. Осталось попыток: <b>5</b>
+Слово: ___
+2025-06-17 22:12:15,396 - aiogram.event - INFO - Update id=926862620 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 22:12:19,718 - handlers.word_game - INFO - Processing guess: 'дом' from user 1009310689
+2025-06-17 22:12:19,718 - handlers.word_game - INFO - Game state - word: лес, attempts: 5
+2025-06-17 22:12:19,786 - handlers.word_game - INFO - Sent response: ❌ Неверно. Осталось попыток: <b>4</b>
+Слово: ___
+2025-06-17 22:12:19,786 - aiogram.event - INFO - Update id=926862621 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 22:12:24,301 - handlers.word_game - INFO - Processing guess: 'ухо' from user 1009310689
+2025-06-17 22:12:24,301 - handlers.word_game - INFO - Game state - word: лес, attempts: 4
+2025-06-17 22:12:24,367 - handlers.word_game - INFO - Sent response: ❌ Неверно. Осталось попыток: <b>3</b>
+Слово: ___
+2025-06-17 22:12:24,367 - aiogram.event - INFO - Update id=926862622 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 22:12:37,558 - handlers.word_game - INFO - Processing guess: 'луг' from user 1009310689
+2025-06-17 22:12:37,558 - handlers.word_game - INFO - Game state - word: лес, attempts: 3
+2025-06-17 22:12:37,651 - handlers.word_game - INFO - Sent response: ❌ Неверно. Осталось попыток: <b>2</b>
+Слово: ___
+2025-06-17 22:12:37,651 - aiogram.event - INFO - Update id=926862623 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 22:12:50,642 - handlers.word_game - INFO - Processing guess: 'дес' from user 1009310689
+2025-06-17 22:12:50,642 - handlers.word_game - INFO - Game state - word: лес, attempts: 2
+2025-06-17 22:12:50,765 - handlers.word_game - INFO - Sent response: ❌ Неверно. Осталось попыток: <b>1</b>
+Слово: ___
+2025-06-17 22:12:50,765 - aiogram.event - INFO - Update id=926862624 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:12:52,440 - handlers.word_game - INFO - Processing guess: 'лес' from user 1009310689
+2025-06-17 22:12:52,440 - handlers.word_game - INFO - Game state - word: лес, attempts: 1
+2025-06-17 22:12:52,638 - handlers.word_game - INFO - Sent response: 🎉 Поздравляю! Ты угадал слово <b>лес</b> и заработал <b>5</b> очков.
+2025-06-17 22:12:52,638 - aiogram.event - INFO - Update id=926862625 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 22:12:54,680 - handlers.word_game - INFO - Word menu callback triggered
+2025-06-17 22:12:54,820 - aiogram.event - INFO - Update id=926862626 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:12:56,172 - handlers.word_game - INFO - Word handler triggered with data: word:long
+2025-06-17 22:12:56,172 - handlers.word_game - INFO - Got word: телевизор
+2025-06-17 22:12:56,172 - handlers.word_game - INFO - State set for user 1009310689
+2025-06-17 22:12:56,285 - aiogram.event - INFO - Update id=926862627 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:13:06,522 - handlers.word_game - INFO - Processing guess: 'телевизор' from user 1009310689
+2025-06-17 22:13:06,522 - handlers.word_game - INFO - Game state - word: телевизор, attempts: 6
+2025-06-17 22:13:06,605 - handlers.word_game - INFO - Sent response: 🎉 Поздравляю! Ты угадал слово <b>телевизор</b> и заработал <b>15</b> очков.
+2025-06-17 22:13:06,605 - aiogram.event - INFO - Update id=926862628 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:15:00,369 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:15:00,369 - __main__ - INFO - Бот останавливается...
+2025-06-17 22:15:00,630 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:15:00,630 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 22:15:13,075 - __main__ - INFO - Начинаю polling...
+2025-06-17 22:15:13,075 - __main__ - INFO - Бот запускается...
+2025-06-17 22:15:13,075 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:15:13,261 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:15:15,867 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:15:16,239 - aiogram.event - INFO - Update id=926862629 is handled. Duration 375 ms by bot id=7576088488
+2025-06-17 22:15:17,920 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 22:15:17,920 - handlers.word_game - INFO - Game started for user 1009310689: 'администрирование'
+2025-06-17 22:15:18,050 - aiogram.event - INFO - Update id=926862630 is handled. Duration 141 ms by bot id=7576088488
+2025-06-17 22:15:19,611 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:15:19,807 - aiogram.event - INFO - Update id=926862631 is handled. Duration 203 ms by bot id=7576088488
+2025-06-17 22:15:21,170 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:15:21,170 - handlers.word_game - INFO - Game started for user 1009310689: 'огонь'
+2025-06-17 22:15:21,303 - aiogram.event - INFO - Update id=926862632 is handled. Duration 141 ms by bot id=7576088488
+2025-06-17 22:15:33,052 - handlers.word_game - INFO - User 1009310689 guessed: 'телик'
+2025-06-17 22:15:33,154 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _ _ _
+❌ Неправильные буквы: —
+❤️ Осталось попыток: 5
+
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:15:33,154 - aiogram.event - INFO - Update id=926862633 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 22:15:46,619 - handlers.word_game - INFO - User 1009310689 guessed: 'огонв'
+2025-06-17 22:15:46,719 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _ _ _
+❌ Неправильные буквы: —
+❤️ Осталось попыток: 4
+
+❌ Неверно, осталось 4 попыток.
+2025-06-17 22:15:46,719 - aiogram.event - INFO - Update id=926862634 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 22:15:51,165 - handlers.word_game - INFO - User 1009310689 guessed: 'огонь'
+2025-06-17 22:15:51,240 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>огонь</b>. +5 очков.
+2025-06-17 22:15:51,240 - aiogram.event - INFO - Update id=926862635 is handled. Duration 79 ms by bot id=7576088488
+2025-06-17 22:15:54,084 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:15:54,205 - aiogram.event - INFO - Update id=926862636 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:16:09,307 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:16:09,307 - handlers.word_game - INFO - Game started for user 1009310689: 'море'
+2025-06-17 22:16:09,531 - aiogram.event - INFO - Update id=926862637 is handled. Duration 233 ms by bot id=7576088488
+2025-06-17 22:17:56,697 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:17:56,697 - __main__ - INFO - Бот останавливается...
+2025-06-17 22:17:56,959 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:17:56,960 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 22:18:01,083 - __main__ - INFO - Начинаю polling...
+2025-06-17 22:18:01,084 - __main__ - INFO - Бот запускается...
+2025-06-17 22:18:01,084 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:18:01,227 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:18:04,147 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:18:04,425 - aiogram.event - INFO - Update id=926862638 is handled. Duration 281 ms by bot id=7576088488
+2025-06-17 22:18:08,956 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 22:18:08,956 - aiogram.event - INFO - Update id=926862639 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 22:18:11,740 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:18:11,870 - aiogram.event - INFO - Update id=926862640 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:18:13,928 - handlers.word_game - INFO - word_handler triggered with word:random
+2025-06-17 22:18:13,928 - handlers.word_game - INFO - Game started for user 1009310689: 'автомобиль'
+2025-06-17 22:18:14,235 - aiogram.event - INFO - Update id=926862641 is handled. Duration 312 ms by bot id=7576088488
+2025-06-17 22:18:56,003 - handlers.word_game - INFO - User 1009310689 guessed: 'автомоgbkm'
+2025-06-17 22:18:56,230 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _ _ _ _ _ _ _ _
+📝 Подсказка: 💡 Длинное слово из 10 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>А</b>
+📊 Отгадано букв: 0/9
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:18:56,230 - aiogram.event - INFO - Update id=926862642 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 22:19:09,996 - handlers.word_game - INFO - User 1009310689 guessed: 'подсказка'
+2025-06-17 22:19:10,119 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: а _ _ о _ о _ и _ _
+📝 Подсказка: 💡 Длинное слово из 10 букв
+📂 Категория: Общие слова
+🔤 Последняя буква: <b>Ь</b>
+📊 Отгадано букв: 4/9
+✅ Правильные: а, и, о
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 1
+
+<i>Напиши букву, слово или 'подсказка':</i>
+💡 Подсказка: открыты все гласные буквы! (осталось 1 подсказок)
+2025-06-17 22:19:10,121 - aiogram.event - INFO - Update id=926862643 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:19:17,611 - handlers.word_game - INFO - User 1009310689 guessed: 'подсказка'
+2025-06-17 22:19:17,703 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: а _ _ о _ о _ и _ _
+📝 Подсказка: 💡 Длинное слово из 10 букв
+📂 Категория: Общие слова
+🔤 Последняя буква: <b>Ь</b>
+📊 Отгадано букв: 4/9
+✅ Правильные: а, и, о
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 0
+
+<i>Напиши букву, слово или 'подсказка':</i>
+💡 Подсказка: открыты все гласные буквы! (осталось 0 подсказок)
+2025-06-17 22:19:17,703 - aiogram.event - INFO - Update id=926862644 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 22:19:24,511 - handlers.word_game - INFO - User 1009310689 guessed: 'автомобиль'
+2025-06-17 22:19:24,643 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>автомобиль</b>. +15 очков.
+2025-06-17 22:19:24,643 - aiogram.event - INFO - Update id=926862645 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:19:25,833 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:19:26,026 - aiogram.event - INFO - Update id=926862646 is handled. Duration 187 ms by bot id=7576088488
+2025-06-17 22:19:27,335 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:19:27,335 - handlers.word_game - INFO - Game started for user 1009310689: 'кот'
+2025-06-17 22:19:27,475 - aiogram.event - INFO - Update id=926862647 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:19:31,303 - handlers.word_game - INFO - User 1009310689 guessed: 'кот'
+2025-06-17 22:19:31,305 - data - INFO - Пользователь 1009310689 получил достижение: 💯 100 очков
+2025-06-17 22:19:31,437 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>кот</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:19:31,437 - aiogram.event - INFO - Update id=926862648 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:19:33,108 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:19:33,234 - aiogram.event - INFO - Update id=926862649 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:19:33,921 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:19:33,923 - handlers.word_game - INFO - Game started for user 1009310689: 'мир'
+2025-06-17 22:19:34,043 - aiogram.event - INFO - Update id=926862650 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:19:36,970 - handlers.word_game - INFO - User 1009310689 guessed: 'мир'
+2025-06-17 22:19:37,050 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>мир</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:19:37,050 - aiogram.event - INFO - Update id=926862651 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:19:38,910 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:19:39,033 - aiogram.event - INFO - Update id=926862652 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:19:39,742 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:19:39,742 - handlers.word_game - INFO - Game started for user 1009310689: 'сад'
+2025-06-17 22:19:39,867 - aiogram.event - INFO - Update id=926862653 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:19:47,600 - handlers.word_game - INFO - User 1009310689 guessed: 'сон'
+2025-06-17 22:19:47,695 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>С</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:19:47,696 - aiogram.event - INFO - Update id=926862654 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 22:20:03,236 - handlers.word_game - INFO - User 1009310689 guessed: 'сат'
+2025-06-17 22:20:03,400 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>С</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 4
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 4 попыток.
+2025-06-17 22:20:03,400 - aiogram.event - INFO - Update id=926862655 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 22:20:06,506 - handlers.word_game - INFO - User 1009310689 guessed: 'сад'
+2025-06-17 22:20:06,581 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>сад</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:20:06,581 - aiogram.event - INFO - Update id=926862656 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:20:08,854 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:20:09,241 - aiogram.event - INFO - Update id=926862657 is handled. Duration 390 ms by bot id=7576088488
+2025-06-17 22:20:11,057 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:20:11,057 - handlers.word_game - INFO - Game started for user 1009310689: 'лед'
+2025-06-17 22:20:11,174 - aiogram.event - INFO - Update id=926862658 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:20:15,881 - handlers.word_game - INFO - User 1009310689 guessed: 'лак'
+2025-06-17 22:20:15,948 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>Л</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:20:15,948 - aiogram.event - INFO - Update id=926862659 is handled. Duration 63 ms by bot id=7576088488
+2025-06-17 22:20:16,755 - handlers.word_game - INFO - User 1009310689 guessed: 'лом'
+2025-06-17 22:20:16,821 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>Л</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 4
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 4 попыток.
+2025-06-17 22:20:16,821 - aiogram.event - INFO - Update id=926862660 is handled. Duration 63 ms by bot id=7576088488
+2025-06-17 22:20:18,632 - handlers.word_game - INFO - User 1009310689 guessed: 'лед'
+2025-06-17 22:20:18,636 - data - INFO - Пользователь 1009310689 получил достижение: 📝 Чемпион слов (10 слов)
+2025-06-17 22:20:18,706 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>лед</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:20:18,706 - aiogram.event - INFO - Update id=926862661 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:20:20,467 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:20:20,635 - aiogram.event - INFO - Update id=926862662 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 22:20:21,211 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:20:21,211 - handlers.word_game - INFO - Game started for user 1009310689: 'сад'
+2025-06-17 22:20:21,325 - aiogram.event - INFO - Update id=926862663 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 22:20:24,196 - handlers.word_game - INFO - User 1009310689 guessed: 'сом'
+2025-06-17 22:20:24,272 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>С</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:20:24,272 - aiogram.event - INFO - Update id=926862664 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 22:20:25,495 - handlers.word_game - INFO - User 1009310689 guessed: 'сон'
+2025-06-17 22:20:25,562 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>С</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 4
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 4 попыток.
+2025-06-17 22:20:25,562 - aiogram.event - INFO - Update id=926862665 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:20:26,367 - handlers.word_game - INFO - User 1009310689 guessed: 'сок'
+2025-06-17 22:20:26,484 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>С</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 3
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 3 попыток.
+2025-06-17 22:20:26,484 - aiogram.event - INFO - Update id=926862666 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:20:30,068 - handlers.word_game - INFO - User 1009310689 guessed: 'сад'
+2025-06-17 22:20:30,136 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>сад</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:20:30,136 - aiogram.event - INFO - Update id=926862667 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 22:20:31,917 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:20:32,199 - aiogram.event - INFO - Update id=926862668 is handled. Duration 282 ms by bot id=7576088488
+2025-06-17 22:20:32,712 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:20:32,712 - handlers.word_game - INFO - Game started for user 1009310689: 'лед'
+2025-06-17 22:20:32,857 - aiogram.event - INFO - Update id=926862669 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:20:40,552 - handlers.word_game - INFO - User 1009310689 guessed: 'лак'
+2025-06-17 22:20:40,622 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>Л</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:20:40,622 - aiogram.event - INFO - Update id=926862670 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 22:20:41,889 - handlers.word_game - INFO - User 1009310689 guessed: 'лом'
+2025-06-17 22:20:41,968 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>Л</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 4
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 4 попыток.
+2025-06-17 22:20:41,968 - aiogram.event - INFO - Update id=926862671 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 22:20:45,799 - handlers.word_game - INFO - User 1009310689 guessed: 'лес'
+2025-06-17 22:20:45,885 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>Л</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 3
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 3 попыток.
+2025-06-17 22:20:45,887 - aiogram.event - INFO - Update id=926862672 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 22:20:50,823 - handlers.word_game - INFO - User 1009310689 guessed: 'люк'
+2025-06-17 22:20:51,007 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: 💡 Короткое слово из 3 букв
+📂 Категория: Общие слова
+🔤 Первая буква: <b>Л</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 2
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 2 попыток.
+2025-06-17 22:20:51,007 - aiogram.event - INFO - Update id=926862673 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 22:21:28,747 - handlers.word_game - INFO - User 1009310689 guessed: 'лед'
+2025-06-17 22:21:29,060 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>лед</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:21:29,060 - aiogram.event - INFO - Update id=926862674 is handled. Duration 312 ms by bot id=7576088488
+2025-06-17 22:21:30,733 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:21:30,850 - aiogram.event - INFO - Update id=926862675 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:21:34,060 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 22:21:34,060 - handlers.word_game - INFO - Game started for user 1009310689: 'дифференциал'
+2025-06-17 22:21:34,177 - aiogram.event - INFO - Update id=926862676 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:21:47,247 - handlers.word_game - INFO - User 1009310689 guessed: 'дифференциал'
+2025-06-17 22:21:47,345 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>дифференциал</b>. +30 очков (+10 бонус за отгадывание без подсказок!).
+2025-06-17 22:21:47,347 - aiogram.event - INFO - Update id=926862677 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 22:21:49,888 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:21:50,147 - aiogram.event - INFO - Update id=926862678 is handled. Duration 265 ms by bot id=7576088488
+2025-06-17 22:21:51,044 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 22:21:51,044 - handlers.word_game - INFO - Game started for user 1009310689: 'программирование'
+2025-06-17 22:21:51,168 - aiogram.event - INFO - Update id=926862679 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:21:56,749 - handlers.word_game - INFO - User 1009310689 guessed: 'программирование'
+2025-06-17 22:21:56,850 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>программирование</b>. +30 очков (+10 бонус за отгадывание без подсказок!).
+2025-06-17 22:21:56,850 - aiogram.event - INFO - Update id=926862680 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 22:21:57,758 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:21:58,069 - aiogram.event - INFO - Update id=926862681 is handled. Duration 313 ms by bot id=7576088488
+2025-06-17 22:22:15,031 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:22:15,031 - handlers.word_game - INFO - Game started for user 1009310689: 'огонь'
+2025-06-17 22:22:15,431 - aiogram.event - INFO - Update id=926862682 is handled. Duration 406 ms by bot id=7576088488
+2025-06-17 22:22:27,476 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:22:27,596 - aiogram.event - INFO - Update id=926862683 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:22:28,186 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:22:28,186 - handlers.word_game - INFO - Game started for user 1009310689: 'море'
+2025-06-17 22:22:28,320 - aiogram.event - INFO - Update id=926862684 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:22:29,796 - handlers.word_game - INFO - User 1009310689 guessed: 'авыа'
+2025-06-17 22:22:29,894 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _ _
+📝 Подсказка: 🌊 Большая вода с соленой водой
+📂 Категория: Природа
+🔤 Первая буква: <b>М</b>
+📊 Отгадано букв: 0/4
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:22:29,894 - aiogram.event - INFO - Update id=926862685 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 22:36:52,396 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:36:52,396 - __main__ - INFO - Бот останавливается...
+2025-06-17 22:36:52,659 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:36:52,660 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 22:37:00,457 - __main__ - INFO - Начинаю polling...
+2025-06-17 22:37:00,458 - __main__ - INFO - Бот запускается...
+2025-06-17 22:37:00,458 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:37:00,605 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:37:33,334 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 22:37:33,334 - aiogram.event - INFO - Update id=926862686 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 22:37:34,933 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:37:35,131 - aiogram.event - INFO - Update id=926862687 is handled. Duration 202 ms by bot id=7576088488
+2025-06-17 22:37:36,073 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:37:36,073 - handlers.word_game - INFO - Game started for user 1009310689: 'мир'
+2025-06-17 22:37:36,207 - aiogram.event - INFO - Update id=926862688 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:37:43,060 - handlers.word_game - INFO - User 1009310689 guessed: 'мед'
+2025-06-17 22:37:43,191 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: None
+📂 Категория: Общие слова
+🔤 Первая буква: <b>М</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:37:43,192 - aiogram.event - INFO - Update id=926862689 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:37:47,891 - handlers.word_game - INFO - User 1009310689 guessed: 'мод'
+2025-06-17 22:37:47,976 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: None
+📂 Категория: Общие слова
+🔤 Первая буква: <b>М</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 4
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 4 попыток.
+2025-06-17 22:37:47,976 - aiogram.event - INFO - Update id=926862690 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 22:37:51,345 - handlers.word_game - INFO - User 1009310689 guessed: 'мох'
+2025-06-17 22:37:51,410 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: None
+📂 Категория: Общие слова
+🔤 Первая буква: <b>М</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 3
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 3 попыток.
+2025-06-17 22:37:51,410 - aiogram.event - INFO - Update id=926862691 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 22:38:07,105 - handlers.word_game - INFO - User 1009310689 guessed: 'мир'
+2025-06-17 22:38:07,294 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>мир</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:38:07,294 - aiogram.event - INFO - Update id=926862692 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 22:38:09,366 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:38:09,480 - aiogram.event - INFO - Update id=926862693 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 22:38:10,018 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:38:10,018 - handlers.word_game - INFO - Game started for user 1009310689: 'дом'
+2025-06-17 22:38:10,140 - aiogram.event - INFO - Update id=926862694 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:38:14,675 - handlers.word_game - INFO - User 1009310689 guessed: 'дом'
+2025-06-17 22:38:14,747 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>дом</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:38:14,747 - aiogram.event - INFO - Update id=926862695 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 22:38:16,336 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:38:16,586 - aiogram.event - INFO - Update id=926862696 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 22:38:17,231 - handlers.word_game - INFO - word_handler triggered with word:long
+2025-06-17 22:38:17,232 - handlers.word_game - INFO - Game started for user 1009310689: 'холодильник'
+2025-06-17 22:38:17,537 - aiogram.event - INFO - Update id=926862697 is handled. Duration 311 ms by bot id=7576088488
+2025-06-17 22:38:28,283 - handlers.word_game - INFO - User 1009310689 guessed: 'холодос'
+2025-06-17 22:38:28,360 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _ _ _ _ _ _ _ _ _
+📝 Подсказка: None
+📂 Категория: Техника
+🔤 Первая буква: <b>Х</b>
+📊 Отгадано букв: 0/8
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:38:28,360 - aiogram.event - INFO - Update id=926862698 is handled. Duration 79 ms by bot id=7576088488
+2025-06-17 22:38:33,490 - handlers.word_game - INFO - User 1009310689 guessed: 'подсказка'
+2025-06-17 22:38:33,563 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ о _ о _ и _ _ _ и _
+📝 Подсказка: None
+📂 Категория: Техника
+
+📊 Отгадано букв: 4/8
+✅ Правильные: и, о
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 1
+
+<i>Напиши букву, слово или 'подсказка':</i>
+💡 Подсказка: открыты все гласные буквы! (осталось 1 подсказок)
+2025-06-17 22:38:33,563 - aiogram.event - INFO - Update id=926862699 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:38:38,548 - handlers.word_game - INFO - User 1009310689 guessed: 'подсказка'
+2025-06-17 22:38:38,619 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ о _ о _ и _ _ _ и _
+📝 Подсказка: None
+📂 Категория: Техника
+
+📊 Отгадано букв: 4/8
+✅ Правильные: и, о
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 0
+
+<i>Напиши букву, слово или 'подсказка':</i>
+💡 Подсказка: открыты все гласные буквы! (осталось 0 подсказок)
+2025-06-17 22:38:38,621 - aiogram.event - INFO - Update id=926862700 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 22:38:54,377 - handlers.word_game - INFO - User 1009310689 guessed: 'подсказка'
+2025-06-17 22:38:54,644 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ о _ о _ и _ _ _ и _
+📝 Подсказка: None
+📂 Категория: Техника
+
+📊 Отгадано букв: 4/8
+✅ Правильные: и, о
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 0
+
+<i>Напиши букву, слово или 'подсказка':</i>
+⚠️ Подсказки закончились!
+2025-06-17 22:38:54,644 - aiogram.event - INFO - Update id=926862701 is handled. Duration 265 ms by bot id=7576088488
+2025-06-17 22:39:03,225 - handlers.word_game - INFO - User 1009310689 guessed: 'холодильник'
+2025-06-17 22:39:03,313 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>холодильник</b>. +15 очков.
+2025-06-17 22:39:03,313 - aiogram.event - INFO - Update id=926862702 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 22:39:04,408 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:39:04,600 - aiogram.event - INFO - Update id=926862703 is handled. Duration 203 ms by bot id=7576088488
+2025-06-17 22:39:05,334 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 22:39:05,334 - handlers.word_game - INFO - Game started for user 1009310689: 'администрирование'
+2025-06-17 22:39:05,580 - aiogram.event - INFO - Update id=926862704 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 22:39:49,312 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:39:49,698 - aiogram.event - INFO - Update id=926862705 is handled. Duration 390 ms by bot id=7576088488
+2025-06-17 22:39:51,659 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 22:39:51,659 - handlers.word_game - INFO - Game started for user 1009310689: 'дифференциал'
+2025-06-17 22:39:51,817 - aiogram.event - INFO - Update id=926862706 is handled. Duration 157 ms by bot id=7576088488
+2025-06-17 22:39:58,308 - handlers.word_game - INFO - User 1009310689 guessed: 'подсказка'
+2025-06-17 22:39:58,550 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ и _ _ е _ е _ _ и а _
+📝 Подсказка: None
+📂 Категория: Общие слова
+🔤 Последняя буква: <b>Л</b>
+📊 Отгадано букв: 5/9
+✅ Правильные: а, е, и
+❌ Неправильные: —
+❤️ Осталось попыток: 6
+💡 Подсказок осталось: 1
+
+<i>Напиши букву, слово или 'подсказка':</i>
+💡 Подсказка: открыты все гласные буквы! (осталось 1 подсказок)
+2025-06-17 22:39:58,550 - aiogram.event - INFO - Update id=926862707 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 22:40:24,498 - handlers.word_game - INFO - User 1009310689 guessed: 'дифференциал'
+2025-06-17 22:40:24,665 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>дифференциал</b>. +20 очков.
+2025-06-17 22:40:24,665 - aiogram.event - INFO - Update id=926862708 is handled. Duration 170 ms by bot id=7576088488
+2025-06-17 22:41:27,153 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 22:41:27,153 - aiogram.event - INFO - Update id=926862709 is handled. Duration 187 ms by bot id=7576088488
+2025-06-17 22:41:30,079 - aiogram.event - INFO - Update id=926862710 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:41:31,162 - aiogram.event - INFO - Update id=926862711 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:41:37,333 - aiogram.event - INFO - Update id=926862712 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:41:39,681 - aiogram.event - INFO - Update id=926862713 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:41:43,068 - aiogram.event - INFO - Update id=926862714 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:41:46,005 - aiogram.event - INFO - Update id=926862715 is handled. Duration 280 ms by bot id=7576088488
+2025-06-17 22:41:54,200 - aiogram.event - INFO - Update id=926862716 is handled. Duration 157 ms by bot id=7576088488
+2025-06-17 22:41:55,576 - aiogram.event - INFO - Update id=926862717 is handled. Duration 157 ms by bot id=7576088488
+2025-06-17 22:42:03,764 - aiogram.event - INFO - Update id=926862718 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 22:42:08,023 - aiogram.event - INFO - Update id=926862719 is handled. Duration 187 ms by bot id=7576088488
+2025-06-17 22:42:08,892 - aiogram.event - INFO - Update id=926862720 is handled. Duration 312 ms by bot id=7576088488
+2025-06-17 22:42:09,782 - aiogram.event - INFO - Update id=926862721 is handled. Duration 217 ms by bot id=7576088488
+2025-06-17 22:42:11,137 - aiogram.event - INFO - Update id=926862722 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:42:12,243 - aiogram.event - INFO - Update id=926862723 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 22:42:13,300 - aiogram.event - INFO - Update id=926862724 is handled. Duration 266 ms by bot id=7576088488
+2025-06-17 22:42:14,106 - aiogram.event - INFO - Update id=926862725 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:42:15,371 - aiogram.event - INFO - Update id=926862726 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:42:16,120 - aiogram.event - INFO - Update id=926862727 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:42:17,035 - aiogram.event - INFO - Update id=926862728 is handled. Duration 186 ms by bot id=7576088488
+2025-06-17 22:42:20,883 - aiogram.event - INFO - Update id=926862729 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:42:22,415 - aiogram.event - INFO - Update id=926862730 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:42:23,420 - aiogram.event - INFO - Update id=926862731 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:42:40,064 - aiogram.event - INFO - Update id=926862732 is handled. Duration 157 ms by bot id=7576088488
+2025-06-17 22:42:58,524 - aiogram.event - INFO - Update id=926862733 is handled. Duration 296 ms by bot id=7576088488
+2025-06-17 22:43:22,581 - aiogram.event - INFO - Update id=926862734 is handled. Duration 328 ms by bot id=7576088488
+2025-06-17 22:43:23,863 - aiogram.event - INFO - Update id=926862735 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:43:33,063 - aiogram.event - INFO - Update id=926862736 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:43:35,675 - aiogram.event - INFO - Update id=926862737 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 22:43:39,469 - aiogram.event - INFO - Update id=926862738 is handled. Duration 296 ms by bot id=7576088488
+2025-06-17 22:43:54,289 - aiogram.event - INFO - Update id=926862739 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:44:06,453 - aiogram.event - INFO - Update id=926862740 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:44:10,899 - aiogram.event - INFO - Update id=926862741 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:44:12,912 - aiogram.event - INFO - Update id=926862742 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 22:44:56,245 - aiogram.event - INFO - Update id=926862743 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 22:44:58,031 - aiogram.event - INFO - Update id=926862744 is handled. Duration 108 ms by bot id=7576088488
+2025-06-17 22:45:15,341 - aiogram.event - INFO - Update id=926862745 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 22:45:17,569 - aiogram.event - INFO - Update id=926862746 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 22:45:18,912 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:45:19,047 - aiogram.event - INFO - Update id=926862747 is handled. Duration 141 ms by bot id=7576088488
+2025-06-17 22:45:20,399 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:45:20,399 - handlers.word_game - INFO - Game started for user 1009310689: 'кот'
+2025-06-17 22:45:20,556 - aiogram.event - INFO - Update id=926862748 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 22:45:22,547 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:45:22,675 - aiogram.event - INFO - Update id=926862749 is handled. Duration 141 ms by bot id=7576088488
+2025-06-17 22:45:30,886 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:45:30,886 - handlers.word_game - INFO - Game started for user 1009310689: 'сад'
+2025-06-17 22:45:31,056 - aiogram.event - INFO - Update id=926862750 is handled. Duration 172 ms by bot id=7576088488
+2025-06-17 22:45:35,758 - handlers.word_game - INFO - User 1009310689 guessed: 'сад'
+2025-06-17 22:45:35,846 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Это было слово <b>сад</b>. +7 очков (+2 бонус за отгадывание без подсказок!).
+2025-06-17 22:45:35,846 - aiogram.event - INFO - Update id=926862751 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 22:46:06,099 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 22:46:06,099 - __main__ - INFO - Бот останавливается...
+2025-06-17 22:46:06,357 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:46:06,359 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 22:46:10,400 - __main__ - INFO - Начинаю polling...
+2025-06-17 22:46:10,400 - __main__ - INFO - Бот запускается...
+2025-06-17 22:46:10,400 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 22:46:10,626 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 22:46:50,166 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:46:50,633 - aiogram.event - INFO - Update id=926862752 is handled. Duration 469 ms by bot id=7576088488
+2025-06-17 22:46:51,921 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:46:51,921 - handlers.word_game - INFO - Game started for user 1009310689: 'мир'
+2025-06-17 22:46:52,039 - aiogram.event - INFO - Update id=926862753 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:46:53,483 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:46:53,600 - aiogram.event - INFO - Update id=926862754 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:47:00,673 - handlers.word_game - INFO - User 1009310689 guessed: '/starty'
+2025-06-17 22:47:00,761 - handlers.word_game - INFO - Sent to 1009310689: 🔤 <b>Угадай слово</b>
+
+🎯 Слово: _ _ _
+📝 Подсказка: None
+📂 Категория: Общие слова
+🔤 Первая буква: <b>М</b>
+📊 Отгадано букв: 0/3
+✅ Правильные: —
+❌ Неправильные: —
+❤️ Осталось попыток: 5
+💡 Подсказок осталось: 2
+
+<i>Напиши букву, слово или 'подсказка':</i>
+❌ Неверно, осталось 5 попыток.
+2025-06-17 22:47:00,761 - aiogram.event - INFO - Update id=926862755 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 22:47:04,033 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 22:47:04,033 - aiogram.event - INFO - Update id=926862756 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:47:04,999 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:47:05,129 - aiogram.event - INFO - Update id=926862757 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 22:47:07,015 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:47:07,189 - aiogram.event - INFO - Update id=926862758 is handled. Duration 188 ms by bot id=7576088488
+2025-06-17 22:47:08,053 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 22:47:08,053 - handlers.word_game - INFO - Game started for user 1009310689: 'дом'
+2025-06-17 22:47:08,171 - aiogram.event - INFO - Update id=926862759 is handled. Duration 108 ms by bot id=7576088488
+2025-06-17 22:47:11,918 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:47:12,032 - aiogram.event - INFO - Update id=926862760 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:47:12,839 - handlers.word_game - INFO - word_handler triggered with word:random
+2025-06-17 22:47:12,839 - handlers.word_game - INFO - Game started for user 1009310689: 'сад'
+2025-06-17 22:47:12,993 - aiogram.event - INFO - Update id=926862761 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 22:47:13,892 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 22:47:14,010 - aiogram.event - INFO - Update id=926862762 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 22:47:14,520 - handlers.word_game - INFO - word_handler triggered with word:long
+2025-06-17 22:47:14,520 - handlers.word_game - INFO - Game started for user 1009310689: 'пианино'
+2025-06-17 22:47:14,633 - aiogram.event - INFO - Update id=926862763 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:30:13,539 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 23:30:13,541 - __main__ - INFO - Бот останавливается...
+2025-06-17 23:30:13,791 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:30:13,793 - __main__ - INFO - Бот остановлен пользователем

@@ -1,19 +1,33 @@
 import asyncio
 import logging
 import os
+import sys                       # ➊ добавили
 from pathlib import Path
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from handlers import main_router, quiz_router, games_router, riddles_router, word_router
 
+# ➋ Гарантируем UTF-8 в stdout / stderr (Windows)
+if os.name == "nt":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except AttributeError:
+        # Fallback для очень старых интерпретаторов
+        import codecs
+        import msvcrt
+        msvcrt.setmode(sys.stdout.fileno(), os.O_TEXT)
+        sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "replace")
+        sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "replace")
+
 # Настройка логирования
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler('bot.log'),
-        logging.StreamHandler()
+        logging.FileHandler("bot.log", encoding="utf-8"),   # ➌ указываем кодировку
+        logging.StreamHandler()                             # использует перенастроенный stdout
     ]
 )
 logger = logging.getLogger(__name__)
