@@ -1,377 +1,177 @@
 from aiogram import Router, F
-from aiogram.types import CallbackQuery, Message
-from keyboards import quiz_menu, back_button, difficulty_keyboard
-from questions import question_bank, Difficulty, Category, check_answer
+from aiogram.types import Message, CallbackQuery
+from keyboards import quiz_menu, back_button
 from data import user_data
+from questions import question_bank, Difficulty, Category, check_answer
 import logging
-import asyncio
 import random
 
 router = Router()
 logger = logging.getLogger(__name__)
 
-# Словарь для хранения активных викторин пользователей
-active_quizzes = {}
+# Временное хранение текущих вопросов для пользователей
+user_questions = {}
 
 @router.callback_query(F.data == "quiz")
-async def quiz_menu_handler(callback: CallbackQuery):
+async def quiz_menu_callback(callback: CallbackQuery):
     """Показать меню викторины"""
     await callback.message.edit_text(
-        "🧠 <b>Викторина</b>\n\nВыбери тип вопросов:",
+        "🧠 <b>Викторина</b>\n\nВыбери уровень сложности:",
         reply_markup=quiz_menu()
     )
     await callback.answer()
 
 @router.callback_query(F.data.startswith("quiz:"))
 async def quiz_handler(callback: CallbackQuery):
-    """Обработчик различных типов викторин"""
+    """Обработчик викторины"""
     quiz_type = callback.data.split(":")[1]
     user_id = callback.from_user.id
 
+    # Определяем параметры вопроса
+    category = None
+    difficulty = None
+
     if quiz_type == "easy":
-        await start_quiz(callback, Difficulty.EASY)
+        difficulty = Difficulty.EASY
     elif quiz_type == "medium":
-        await start_quiz(callback, Difficulty.MEDIUM)
+        difficulty = Difficulty.MEDIUM
     elif quiz_type == "hard":
-        await start_quiz(callback, Difficulty.HARD)
+        difficulty = Difficulty.HARD
     elif quiz_type == "random":
-        difficulty = random.choice(list(Difficulty))
-        await start_quiz(callback, difficulty)
+        difficulty = random.choice([Difficulty.EASY, Difficulty.MEDIUM, Difficulty.HARD])
     elif quiz_type == "speed":
-        await start_speed_quiz(callback)
+        # Быстрая викторина - только легкие вопросы
+        difficulty = Difficulty.EASY
     elif quiz_type == "mixed":
-        await start_mixed_quiz(callback)
+        # Смешанная викторина - случайная категория и сложность
+        category = random.choice(list(Category))
+        difficulty = random.choice([Difficulty.EASY, Difficulty.MEDIUM, Difficulty.HARD])
 
-    await callback.answer()
+    try:
+        # Получаем вопрос
+        question = question_bank.get_question(category, difficulty)
+        user_questions[user_id] = question
 
-async def start_quiz(callback: CallbackQuery, difficulty: Difficulty):
-    """Начать обычную викторину"""
-    user_id = callback.from_user.id
+        # Определяем очки за вопрос
+        points = get_question_points(question["difficulty"])
 
-    # Получаем случайный вопрос заданной сложности
-    question_data = question_bank.get_question(difficulty=difficulty)
+        question_text = f"""
+🧠 <b>Викторина</b>
 
-    if not question_data:
+📝 <b>Вопрос:</b>
+{question['q']}
+
+🎯 <b>Сложность:</b> {get_difficulty_name(question['difficulty'])}
+💰 <b>Очков за правильный ответ:</b> {points}
+
+<i>Напиши ответ сообщением:</i>
+"""
+
+        await callback.message.edit_text(question_text, reply_markup=back_button("quiz"))
+        await callback.answer()
+
+    except Exception as e:
+        logger.error(f"Ошибка при получении вопроса: {e}")
         await callback.message.edit_text(
-            "😔 К сожалению, вопросы этой сложности временно недоступны.",
+            "❌ Произошла ошибка при загрузке вопроса. Попробуй еще раз.",
             reply_markup=back_button("quiz")
         )
-        return
+        await callback.answer()
 
-    # Сохраняем состояние викторины
-    active_quizzes[user_id] = {
-        "question": question_data,
-        "start_time": asyncio.get_event_loop().time(),
-        "type": "normal",
-        "difficulty": difficulty
-    }
-
-    difficulty_emoji = {
-        Difficulty.EASY: "🟢",
-        Difficulty.MEDIUM: "🟡",
-        Difficulty.HARD: "🔴"
-    }
-
-    difficulty_points = {
-        Difficulty.EASY: 2,
-        Difficulty.MEDIUM: 4,
-        Difficulty.HARD: 6
-    }
-
-    quiz_text = f"""
-🧠 <b>Викторина</b>
-{difficulty_emoji[difficulty]} <b>Сложность:</b> {difficulty.name.title()}
-💰 <b>За правильный ответ:</b> {difficulty_points[difficulty]} очков
-
-❓ <b>Вопрос:</b>
-{question_data['q']}
-
-✍️ <i>Напишите ваш ответ...</i>
-"""
-
-    await callback.message.edit_text(quiz_text, reply_markup=back_button("quiz"))
-
-async def start_speed_quiz(callback: CallbackQuery):
-    """Начать быструю викторину (5 вопросов за 60 секунд)"""
-    user_id = callback.from_user.id
-
-    questions = []
-    for _ in range(5):
-        q = question_bank.get_question()
-        questions.append(q)
-
-    active_quizzes[user_id] = {
-        "questions": questions,
-        "current_question": 0,
-        "correct_answers": 0,
-        "start_time": asyncio.get_event_loop().time(),
-        "type": "speed",
-        "time_limit": 60
-    }
-
-    await show_speed_question(callback.message, user_id)
-
-async def start_mixed_quiz(callback: CallbackQuery):
-    """Начать смешанную викторину (разные категории)"""
-    user_id = callback.from_user.id
-
-    questions = []
-    categories = list(Category)
-
-    for _ in range(10):
-        category = random.choice(categories)
-        difficulty = random.choice(list(Difficulty))
-        q = question_bank.get_question(category=category, difficulty=difficulty)
-        questions.append(q)
-
-    active_quizzes[user_id] = {
-        "questions": questions,
-        "current_question": 0,
-        "correct_answers": 0,
-        "start_time": asyncio.get_event_loop().time(),
-        "type": "mixed"
-    }
-
-    await show_mixed_question(callback.message, user_id)
-
-async def show_speed_question(message: Message, user_id: int):
-    """Показать вопрос в быстрой викторине"""
-    quiz = active_quizzes.get(user_id)
-    if not quiz:
-        return
-
-    current_q = quiz["current_question"]
-    total_q = len(quiz["questions"])
-    question = quiz["questions"][current_q]
-
-    elapsed_time = asyncio.get_event_loop().time() - quiz["start_time"]
-    remaining_time = max(0, quiz["time_limit"] - elapsed_time)
-
-    if remaining_time <= 0:
-        await finish_speed_quiz(message, user_id)
-        return
-
-    quiz_text = f"""
-⚡ <b>Быстрая викторина</b>
-📊 <b>Прогресс:</b> {current_q + 1}/{total_q}
-⏰ <b>Осталось времени:</b> {int(remaining_time)} сек
-✅ <b>Правильных ответов:</b> {quiz["correct_answers"]}
-
-❓ <b>Вопрос:</b>
-{question['q']}
-
-✍️ <i>Быстрее отвечайте!</i>
-"""
-
-    await message.edit_text(quiz_text, reply_markup=back_button("quiz"))
-
-async def show_mixed_question(message: Message, user_id: int):
-    """Показать вопрос в смешанной викторине"""
-    quiz = active_quizzes.get(user_id)
-    if not quiz:
-        return
-
-    current_q = quiz["current_question"]
-    total_q = len(quiz["questions"])
-    question = quiz["questions"][current_q]
-
-    difficulty_emoji = {
-        Difficulty.EASY: "🟢",
-        Difficulty.MEDIUM: "🟡",
-        Difficulty.HARD: "🔴"
-    }
-
-    quiz_text = f"""
-🎪 <b>Смешанная викторина</b>
-📊 <b>Прогресс:</b> {current_q + 1}/{total_q}
-{difficulty_emoji[question['difficulty']]} <b>Сложность:</b> {question['difficulty'].name.title()}
-📂 <b>Категория:</b> {question['category'].value.title()}
-✅ <b>Правильных ответов:</b> {quiz["correct_answers"]}
-
-❓ <b>Вопрос:</b>
-{question['q']}
-
-✍️ <i>Напишите ваш ответ...</i>
-"""
-
-    await message.edit_text(quiz_text, reply_markup=back_button("quiz"))
-
-@router.message()
-async def process_quiz_answer(message: Message):
-    """Обработка ответов на вопросы викторины"""
+@router.message(F.text)
+async def handle_quiz_answer(message: Message):
+    """Обработчик ответов на вопросы викторины"""
     user_id = message.from_user.id
 
-    if user_id not in active_quizzes:
+    # Проверяем, есть ли активный вопрос для пользователя
+    if user_id not in user_questions:
         return
 
-    quiz = active_quizzes[user_id]
+    question = user_questions[user_id]
     user_answer = message.text.strip()
 
-    if quiz["type"] == "normal":
-        await process_normal_answer(message, user_id, user_answer)
-    elif quiz["type"] == "speed":
-        await process_speed_answer(message, user_id, user_answer)
-    elif quiz["type"] == "mixed":
-        await process_mixed_answer(message, user_id, user_answer)
+    try:
+        # Проверяем ответ
+        is_correct = check_answer(question, user_answer)
+        points = get_question_points(question["difficulty"])
 
-async def process_normal_answer(message: Message, user_id: int, user_answer: str):
-    """Обработка ответа в обычной викторине"""
-    quiz = active_quizzes[user_id]
-    question = quiz["question"]
-    difficulty = quiz["difficulty"]
+        if is_correct:
+            # Правильный ответ
+            await user_data.update_stat(user_id, "answered", 1)
+            await user_data.update_stat(user_id, "correct", 1)
+            await user_data.update_score(user_id, points)
 
-    is_correct = check_answer(question, user_answer)
+            # Обновляем серию
+            streak, streak_updated = await user_data.update_streak(user_id)
 
-    # Подсчет очков
-    points_map = {
-        Difficulty.EASY: 2,
-        Difficulty.MEDIUM: 4,
-        Difficulty.HARD: 6
-    }
+            streak_text = ""
+            if streak_updated:
+                streak_text = f"\n🔥 <b>Серия:</b> {streak}"
 
-    if is_correct:
-        points = points_map[difficulty]
-        await user_data.update_score(user_id, points)
-        await user_data.update_stat(user_id, "correct", 1)
-        await user_data.update_streak(user_id)
-
-        result_text = f"""
+            response_text = f"""
 ✅ <b>Правильно!</b>
-💰 +{points} очков
 
-💡 <b>Объяснение:</b>
-{question.get('explanation', 'Отличная работа!')}
+💰 <b>Получено очков:</b> +{points}
+{streak_text}
+
+📚 <b>Объяснение:</b>
+{question.get('explanation', 'Молодец!')}
+
+Хочешь продолжить?
 """
-    else:
-        await user_data.update_score(user_id, -1)
-        correct_answer = question['a'][0]
+        else:
+            # Неправильный ответ
+            await user_data.update_stat(user_id, "answered", 1)
+            await user_data.update_score(user_id, -1)
 
-        result_text = f"""
+            # Сбрасываем серию
+            user_info = user_data.get_info(user_id)
+            user_info["streak"] = 0
+            await user_data.save()
+
+            correct_answer = question["a"][0]
+            response_text = f"""
 ❌ <b>Неправильно!</b>
-💰 -1 очко
+
+💰 <b>Потеряно очков:</b> -1
+🔥 <b>Серия сброшена</b>
 
 ✅ <b>Правильный ответ:</b> {correct_answer}
 
-💡 <b>Объяснение:</b>
-{question.get('explanation', 'Не расстраивайтесь, в следующий раз получится!')}
+📚 <b>Объяснение:</b>
+{question.get('explanation', 'Изучай больше!')}
+
+Не расстраивайся, попробуй еще раз!
 """
 
-    await user_data.update_stat(user_id, "answered", 1)
+        # Удаляем вопрос из памяти
+        del user_questions[user_id]
 
-    # Удаляем викторину из активных
-    del active_quizzes[user_id]
+        await message.answer(response_text, reply_markup=quiz_menu())
 
-    await message.answer(result_text, reply_markup=quiz_menu())
+    except Exception as e:
+        logger.error(f"Ошибка при обработке ответа: {e}")
+        await message.answer(
+            "❌ Произошла ошибка при обработке ответа.",
+            reply_markup=quiz_menu()
+        )
 
-async def process_speed_answer(message: Message, user_id: int, user_answer: str):
-    """Обработка ответа в быстрой викторине"""
-    quiz = active_quizzes[user_id]
+def get_question_points(difficulty: Difficulty) -> int:
+    """Получить количество очков за вопрос"""
+    if difficulty == Difficulty.EASY:
+        return 2
+    elif difficulty == Difficulty.MEDIUM:
+        return 4
+    elif difficulty == Difficulty.HARD:
+        return 6
+    return 2
 
-    # Проверяем время
-    elapsed_time = asyncio.get_event_loop().time() - quiz["start_time"]
-    if elapsed_time > quiz["time_limit"]:
-        await finish_speed_quiz(message, user_id)
-        return
-
-    question = quiz["questions"][quiz["current_question"]]
-    is_correct = check_answer(question, user_answer)
-
-    if is_correct:
-        quiz["correct_answers"] += 1
-        await user_data.update_score(user_id, 3)
-        await user_data.update_stat(user_id, "correct", 1)
-    else:
-        await user_data.update_score(user_id, -1)
-
-    await user_data.update_stat(user_id, "answered", 1)
-
-    # Переходим к следующему вопросу
-    quiz["current_question"] += 1
-
-    if quiz["current_question"] >= len(quiz["questions"]):
-        await finish_speed_quiz(message, user_id)
-    else:
-        await show_speed_question(message, user_id)
-
-async def process_mixed_answer(message: Message, user_id: int, user_answer: str):
-    """Обработка ответа в смешанной викторине"""
-    quiz = active_quizzes[user_id]
-    question = quiz["questions"][quiz["current_question"]]
-
-    is_correct = check_answer(question, user_answer)
-
-    # Подсчет очков в зависимости от сложности
-    points_map = {
-        Difficulty.EASY: 2,
-        Difficulty.MEDIUM: 4,
-        Difficulty.HARD: 6
-    }
-
-    if is_correct:
-        points = points_map[question['difficulty']]
-        quiz["correct_answers"] += 1
-        await user_data.update_score(user_id, points)
-        await user_data.update_stat(user_id, "correct", 1)
-    else:
-        await user_data.update_score(user_id, -1)
-
-    await user_data.update_stat(user_id, "answered", 1)
-
-    # Переходим к следующему вопросу
-    quiz["current_question"] += 1
-
-    if quiz["current_question"] >= len(quiz["questions"]):
-        await finish_mixed_quiz(message, user_id)
-    else:
-        await show_mixed_question(message, user_id)
-
-async def finish_speed_quiz(message: Message, user_id: int):
-    """Завершение быстрой викторины"""
-    quiz = active_quizzes.get(user_id)
-    if not quiz:
-        return
-
-    correct = quiz["correct_answers"]
-    total = len(quiz["questions"])
-    accuracy = (correct / total) * 100 if total > 0 else 0
-
-    result_text = f"""
-⚡ <b>Быстрая викторина завершена!</b>
-
-📊 <b>Результаты:</b>
-✅ Правильных ответов: {correct}/{total}
-📈 Точность: {accuracy:.1f}%
-⏱️ Время: 60 секунд
-
-🏆 <b>Отличная работа!</b>
-"""
-
-    await user_data.update_stat(user_id, "games_played", 1)
-    del active_quizzes[user_id]
-
-    await message.answer(result_text, reply_markup=quiz_menu())
-
-async def finish_mixed_quiz(message: Message, user_id: int):
-    """Завершение смешанной викторины"""
-    quiz = active_quizzes.get(user_id)
-    if not quiz:
-        return
-
-    correct = quiz["correct_answers"]
-    total = len(quiz["questions"])
-    accuracy = (correct / total) * 100 if total > 0 else 0
-
-    result_text = f"""
-🎪 <b>Смешанная викторина завершена!</b>
-
-📊 <b>Результаты:</b>
-✅ Правильных ответов: {correct}/{total}
-📈 Точность: {accuracy:.1f}%
-
-🏆 <b>Поздравляем!</b>
-"""
-
-    await user_data.update_stat(user_id, "games_played", 1)
-    del active_quizzes[user_id]
-
-    await message.answer(result_text, reply_markup=quiz_menu())
+def get_difficulty_name(difficulty: Difficulty) -> str:
+    """Получить название сложности"""
+    if difficulty == Difficulty.EASY:
+        return "🟢 Легкий"
+    elif difficulty == Difficulty.MEDIUM:
+        return "🟡 Средний"
+    elif difficulty == Difficulty.HARD:
+        return "🔴 Сложный"
+    return "🟢 Легкий"
