@@ -6,7 +6,7 @@ from pathlib import Path
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from handlers import main_router, quiz_router, games_router, riddles_router, word_router
+from handlers import main_router, quiz_router, riddles_router, word_router, games_router, admin_router
 
 # ➋ Гарантируем UTF-8 в stdout / stderr (Windows)
 if os.name == "nt":
@@ -78,6 +78,7 @@ async def main():
         dp.shutdown.register(on_shutdown)
 
         # Подключение роутеров
+        dp.include_router(admin_router)
         dp.include_router(main_router)
         dp.include_router(quiz_router)
         dp.include_router(games_router)

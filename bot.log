@@ -1825,3 +1825,273 @@ handlers.quiz.SkipHandler
 2025-06-17 23:30:13,541 - __main__ - INFO - Бот останавливается...
 2025-06-17 23:30:13,791 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
 2025-06-17 23:30:13,793 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 23:30:23,462 - __main__ - INFO - Начинаю polling...
+2025-06-17 23:30:23,462 - __main__ - INFO - Бот запускается...
+2025-06-17 23:30:23,462 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 23:30:23,609 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:30:27,827 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:30:28,084 - aiogram.event - INFO - Update id=926862764 is handled. Duration 264 ms by bot id=7576088488
+2025-06-17 23:30:29,167 - aiogram.event - INFO - Update id=926862765 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:30:30,964 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 23:30:30,964 - aiogram.event - INFO - Update id=926862766 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:30:32,117 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:30:32,390 - aiogram.event - INFO - Update id=926862767 is handled. Duration 280 ms by bot id=7576088488
+2025-06-17 23:30:33,499 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 23:30:33,499 - handlers.word_game - INFO - Game started for user 1009310689: 'лес'
+2025-06-17 23:30:33,632 - aiogram.event - INFO - Update id=926862768 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 23:30:43,944 - handlers.word_game - INFO - User 1009310689 guessed: 'лес'
+2025-06-17 23:30:44,012 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>лес</b>. +7 очков (+2 бонус!).
+2025-06-17 23:30:44,012 - aiogram.event - INFO - Update id=926862769 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 23:30:46,046 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:30:46,163 - aiogram.event - INFO - Update id=926862770 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:30:47,512 - handlers.word_game - INFO - word_handler triggered with word:short
+2025-06-17 23:30:47,512 - handlers.word_game - INFO - Game started for user 1009310689: 'сон'
+2025-06-17 23:30:47,623 - aiogram.event - INFO - Update id=926862771 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 23:30:54,989 - handlers.word_game - INFO - User 1009310689 guessed: 'сон'
+2025-06-17 23:30:55,058 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>сон</b>. +7 очков (+2 бонус!).
+2025-06-17 23:30:55,058 - aiogram.event - INFO - Update id=926862772 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 23:30:57,414 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:30:57,533 - aiogram.event - INFO - Update id=926862773 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:30:58,414 - handlers.word_game - INFO - word_handler triggered with word:long
+2025-06-17 23:30:58,416 - handlers.word_game - INFO - Game started for user 1009310689: 'библиотека'
+2025-06-17 23:30:58,531 - aiogram.event - INFO - Update id=926862774 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:31:10,703 - handlers.word_game - INFO - User 1009310689 guessed: 'библиотека'
+2025-06-17 23:31:10,848 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>библиотека</b>. +22 очков (+7 бонус!).
+2025-06-17 23:31:10,848 - aiogram.event - INFO - Update id=926862775 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 23:31:11,972 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:31:12,111 - aiogram.event - INFO - Update id=926862776 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 23:31:14,375 - aiogram.event - INFO - Update id=926862777 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 23:31:15,182 - aiogram.event - INFO - Update id=926862778 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:31:19,479 - aiogram.event - INFO - Update id=926862779 is handled. Duration 344 ms by bot id=7576088488
+2025-06-17 23:31:20,416 - aiogram.event - INFO - Update id=926862780 is handled. Duration 217 ms by bot id=7576088488
+2025-06-17 23:31:25,695 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:31:25,805 - aiogram.event - INFO - Update id=926862781 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:31:27,992 - handlers.word_game - INFO - word_handler triggered with word:long
+2025-06-17 23:31:27,992 - handlers.word_game - INFO - Game started for user 1009310689: 'автомобиль'
+2025-06-17 23:31:28,130 - aiogram.event - INFO - Update id=926862782 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 23:31:39,201 - handlers.word_game - INFO - User 1009310689 guessed: 'автомобиль'
+2025-06-17 23:31:39,280 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>автомобиль</b>. +22 очков (+7 бонус!).
+2025-06-17 23:31:39,280 - aiogram.event - INFO - Update id=926862783 is handled. Duration 92 ms by bot id=7576088488
+2025-06-17 23:31:40,176 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:31:40,289 - aiogram.event - INFO - Update id=926862784 is handled. Duration 108 ms by bot id=7576088488
+2025-06-17 23:31:41,825 - handlers.word_game - INFO - word_handler triggered with word:long
+2025-06-17 23:31:41,825 - handlers.word_game - INFO - Game started for user 1009310689: 'телефон'
+2025-06-17 23:31:42,129 - aiogram.event - INFO - Update id=926862785 is handled. Duration 311 ms by bot id=7576088488
+2025-06-17 23:31:49,965 - handlers.word_game - INFO - User 1009310689 guessed: 'телефон'
+2025-06-17 23:31:50,049 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>телефон</b>. +22 очков (+7 бонус!).
+2025-06-17 23:31:50,049 - aiogram.event - INFO - Update id=926862786 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 23:31:52,982 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:31:53,092 - aiogram.event - INFO - Update id=926862787 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:31:53,765 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:31:53,765 - handlers.word_game - INFO - Game started for user 1009310689: 'дифференциал'
+2025-06-17 23:31:53,874 - aiogram.event - INFO - Update id=926862788 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:01,219 - handlers.word_game - INFO - User 1009310689 guessed: 'дифференциал'
+2025-06-17 23:32:01,283 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>дифференциал</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:01,283 - aiogram.event - INFO - Update id=926862789 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 23:32:04,303 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:04,431 - aiogram.event - INFO - Update id=926862790 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:05,047 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:32:05,047 - handlers.word_game - INFO - Game started for user 1009310689: 'программирование'
+2025-06-17 23:32:05,170 - aiogram.event - INFO - Update id=926862791 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:10,498 - handlers.word_game - INFO - User 1009310689 guessed: 'программирование'
+2025-06-17 23:32:10,566 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>программирование</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:10,566 - aiogram.event - INFO - Update id=926862792 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:32:11,526 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:11,633 - aiogram.event - INFO - Update id=926862793 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:32:12,532 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:32:12,532 - handlers.word_game - INFO - Game started for user 1009310689: 'археология'
+2025-06-17 23:32:12,745 - aiogram.event - INFO - Update id=926862794 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 23:32:17,089 - handlers.word_game - INFO - User 1009310689 guessed: 'археология'
+2025-06-17 23:32:17,205 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>археология</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:17,205 - aiogram.event - INFO - Update id=926862795 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:18,285 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:18,407 - aiogram.event - INFO - Update id=926862796 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:19,069 - aiogram.event - INFO - Update id=926862797 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 23:32:20,479 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:20,591 - aiogram.event - INFO - Update id=926862798 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:32:21,134 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:32:21,134 - handlers.word_game - INFO - Game started for user 1009310689: 'администрирование'
+2025-06-17 23:32:21,249 - aiogram.event - INFO - Update id=926862799 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:25,383 - handlers.word_game - INFO - User 1009310689 guessed: 'администрирование'
+2025-06-17 23:32:25,456 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>администрирование</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:25,456 - aiogram.event - INFO - Update id=926862800 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:32:26,229 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:26,336 - aiogram.event - INFO - Update id=926862801 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:32:26,875 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:32:26,875 - handlers.word_game - INFO - Game started for user 1009310689: 'археология'
+2025-06-17 23:32:26,986 - aiogram.event - INFO - Update id=926862802 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:32:30,535 - handlers.word_game - INFO - User 1009310689 guessed: 'археология'
+2025-06-17 23:32:30,643 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>археология</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:30,643 - aiogram.event - INFO - Update id=926862803 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 23:32:31,372 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:31,667 - aiogram.event - INFO - Update id=926862804 is handled. Duration 295 ms by bot id=7576088488
+2025-06-17 23:32:31,993 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:32:31,993 - handlers.word_game - INFO - Game started for user 1009310689: 'программирование'
+2025-06-17 23:32:32,215 - aiogram.event - INFO - Update id=926862805 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 23:32:39,353 - handlers.word_game - INFO - User 1009310689 guessed: 'программирование'
+2025-06-17 23:32:39,354 - data - INFO - Пользователь 1009310689 получил достижение: 🏆 500 очков
+2025-06-17 23:32:39,448 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>программирование</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:39,448 - aiogram.event - INFO - Update id=926862806 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 23:32:41,053 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:41,215 - aiogram.event - INFO - Update id=926862807 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 23:32:42,365 - handlers.word_game - INFO - word_handler triggered with word:hard
+2025-06-17 23:32:42,365 - handlers.word_game - INFO - Game started for user 1009310689: 'дифференциал'
+2025-06-17 23:32:42,585 - aiogram.event - INFO - Update id=926862808 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 23:32:47,605 - handlers.word_game - INFO - User 1009310689 guessed: 'дифференциал'
+2025-06-17 23:32:47,693 - handlers.word_game - INFO - Sent to 1009310689: 🎉 Правильно! Было слово <b>дифференциал</b>. +30 очков (+10 бонус!).
+2025-06-17 23:32:47,693 - aiogram.event - INFO - Update id=926862809 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 23:32:49,757 - handlers.word_game - INFO - Opened word game menu
+2025-06-17 23:32:49,870 - aiogram.event - INFO - Update id=926862810 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 23:32:51,686 - aiogram.event - INFO - Update id=926862811 is handled. Duration 578 ms by bot id=7576088488
+2025-06-17 23:32:52,401 - aiogram.event - INFO - Update id=926862812 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 23:33:10,403 - aiogram.event - INFO - Update id=926862813 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 23:33:19,677 - aiogram.event - INFO - Update id=926862814 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:33:19,925 - aiogram.event - INFO - Update id=926862815 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:33:22,852 - aiogram.event - INFO - Update id=926862816 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:39:56,232 - aiogram.event - INFO - Update id=926862817 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 23:40:00,267 - aiogram.event - INFO - Update id=926862818 is handled. Duration 202 ms by bot id=7576088488
+2025-06-17 23:40:01,638 - aiogram.event - INFO - Update id=926862819 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 23:40:02,934 - aiogram.event - INFO - Update id=926862820 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:40:05,347 - aiogram.event - INFO - Update id=926862821 is handled. Duration 171 ms by bot id=7576088488
+2025-06-17 23:40:06,604 - aiogram.event - INFO - Update id=926862822 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 23:40:10,147 - aiogram.event - INFO - Update id=926862823 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 23:40:11,338 - aiogram.event - INFO - Update id=926862824 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 23:40:13,641 - aiogram.event - INFO - Update id=926862825 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 23:40:15,515 - aiogram.event - INFO - Update id=926862826 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:40:31,884 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 23:40:31,884 - __main__ - INFO - Бот останавливается...
+2025-06-17 23:40:32,141 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:40:32,143 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 23:40:37,139 - __main__ - INFO - Начинаю polling...
+2025-06-17 23:40:37,139 - __main__ - INFO - Бот запускается...
+2025-06-17 23:40:37,139 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 23:40:37,329 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:40:45,090 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 23:40:45,090 - aiogram.event - INFO - Update id=926862827 is handled. Duration 218 ms by bot id=7576088488
+2025-06-17 23:41:53,469 - aiogram.event - INFO - Update id=926862828 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:41:57,293 - aiogram.event - INFO - Update id=926862829 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:42:13,569 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 23:42:13,571 - __main__ - INFO - Бот останавливается...
+2025-06-17 23:42:13,832 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:42:13,832 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 23:42:59,636 - __main__ - INFO - Начинаю polling...
+2025-06-17 23:42:59,636 - __main__ - INFO - Бот запускается...
+2025-06-17 23:42:59,636 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 23:42:59,820 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:43:04,340 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 23:43:04,340 - aiogram.event - INFO - Update id=926862830 is handled. Duration 250 ms by bot id=7576088488
+2025-06-17 23:43:06,379 - aiogram.event - INFO - Update id=926862831 is handled. Duration 296 ms by bot id=7576088488
+2025-06-17 23:43:07,782 - aiogram.event - INFO - Update id=926862832 is not handled. Duration 14 ms by bot id=7576088488
+2025-06-17 23:43:14,975 - aiogram.event - INFO - Update id=926862833 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:43:15,747 - aiogram.event - INFO - Update id=926862834 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 23:43:18,729 - aiogram.event - INFO - Update id=926862835 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:46:06,817 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 23:46:06,817 - __main__ - INFO - Бот останавливается...
+2025-06-17 23:46:07,069 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:46:07,069 - __main__ - INFO - Бот остановлен пользователем
+2025-06-17 23:46:09,407 - __main__ - INFO - Начинаю polling...
+2025-06-17 23:46:09,407 - __main__ - INFO - Бот запускается...
+2025-06-17 23:46:09,407 - aiogram.dispatcher - INFO - Start polling
+2025-06-17 23:46:09,550 - aiogram.dispatcher - INFO - Run polling for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:46:17,133 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:17,135 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:17,136 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:17,136 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:17,136 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:17,357 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 23:46:17,357 - aiogram.event - INFO - Update id=926862836 is handled. Duration 219 ms by bot id=7576088488
+2025-06-17 23:46:27,072 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:27,072 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:46:27,151 - aiogram.event - INFO - Update id=926862837 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:46:42,060 - aiogram.event - INFO - Update id=926862838 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:46:44,695 - aiogram.event - INFO - Update id=926862839 is handled. Duration 110 ms by bot id=7576088488
+2025-06-17 23:46:47,386 - aiogram.event - INFO - Update id=926862840 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 23:46:50,703 - aiogram.event - INFO - Update id=926862841 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 23:46:52,143 - handlers.admin - ERROR - Ошибка получения системной информации: No module named 'psutil'
+2025-06-17 23:46:52,206 - aiogram.event - INFO - Update id=926862842 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 23:46:53,792 - aiogram.event - INFO - Update id=926862843 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 23:46:54,812 - aiogram.event - INFO - Update id=926862844 is handled. Duration 63 ms by bot id=7576088488
+2025-06-17 23:46:57,586 - aiogram.event - INFO - Update id=926862845 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:46:58,443 - aiogram.event - INFO - Update id=926862846 is handled. Duration 157 ms by bot id=7576088488
+2025-06-17 23:47:12,250 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:47:12,251 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:47:12,251 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:47:12,346 - aiogram.event - INFO - Update id=926862847 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 23:47:13,831 - handlers.admin - INFO - Админ 1009310689 сбросил данные пользователя 1009310689
+2025-06-17 23:47:13,831 - aiogram.event - INFO - Update id=926862848 is handled. Duration 93 ms by bot id=7576088488
+2025-06-17 23:47:18,503 - aiogram.event - INFO - Update id=926862849 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:47:20,462 - handlers.admin - ERROR - Ошибка получения системной информации: No module named 'psutil'
+2025-06-17 23:47:20,559 - aiogram.event - INFO - Update id=926862850 is handled. Duration 94 ms by bot id=7576088488
+2025-06-17 23:47:21,739 - aiogram.event - INFO - Update id=926862851 is handled. Duration 187 ms by bot id=7576088488
+2025-06-17 23:47:22,673 - aiogram.event - INFO - Update id=926862852 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:47:23,623 - aiogram.event - INFO - Update id=926862853 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 23:47:24,212 - aiogram.event - INFO - Update id=926862854 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 23:48:42,125 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:48:42,126 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:48:42,294 - aiogram.event - INFO - Update id=926862855 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 23:48:44,510 - aiogram.event - INFO - Update id=926862856 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 23:48:51,804 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:48:51,805 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:48:51,806 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:48:51,886 - aiogram.event - INFO - Update id=926862857 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:49:00,835 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:00,835 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:00,835 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:00,988 - aiogram.event - INFO - Update id=926862858 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 23:49:02,195 - data - INFO - Пользователь 1009310689 получил достижение: 👑 1000 очков
+2025-06-17 23:49:02,267 - handlers.admin - INFO - Админ 1009310689 начислил 100000 очков пользователю 1009310689
+2025-06-17 23:49:02,267 - aiogram.event - INFO - Update id=926862859 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:49:09,561 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:09,562 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:09,562 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:09,562 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:09,562 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:09,564 - aiogram.event - INFO - Update id=926862860 is not handled. Duration 15 ms by bot id=7576088488
+2025-06-17 23:49:12,786 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:12,786 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:12,787 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:12,787 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:12,787 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:12,860 - handlers.main - INFO - Пользователь 1009310689 (APECTOBAH_3A_TEPAKT_B_KPOKUSE) запустил бота
+2025-06-17 23:49:12,860 - aiogram.event - INFO - Update id=926862861 is handled. Duration 79 ms by bot id=7576088488
+2025-06-17 23:49:14,119 - aiogram.event - INFO - Update id=926862862 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 23:49:15,607 - aiogram.event - INFO - Update id=926862863 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 23:49:16,526 - aiogram.event - INFO - Update id=926862864 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:49:20,862 - aiogram.event - INFO - Update id=926862865 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:49:21,860 - aiogram.event - INFO - Update id=926862866 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 23:49:25,890 - aiogram.event - INFO - Update id=926862867 is handled. Duration 140 ms by bot id=7576088488
+2025-06-17 23:49:30,689 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:30,689 - handlers.admin - INFO - Проверка админ-прав для пользователя 1009310689: True
+2025-06-17 23:49:30,756 - aiogram.event - INFO - Update id=926862868 is handled. Duration 61 ms by bot id=7576088488
+2025-06-17 23:50:40,774 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:40,774 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:40,774 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:40,774 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:40,774 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:40,934 - handlers.main - INFO - Пользователь 7001360877 (rtpaf) запустил бота
+2025-06-17 23:50:40,934 - aiogram.event - INFO - Update id=926862869 is handled. Duration 156 ms by bot id=7576088488
+2025-06-17 23:50:52,135 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:52,135 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:52,136 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:52,136 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:52,136 - handlers.admin - INFO - Проверка админ-прав для пользователя 7001360877: False
+2025-06-17 23:50:52,136 - aiogram.event - INFO - Update id=926862870 is not handled. Duration 0 ms by bot id=7576088488
+2025-06-17 23:51:07,590 - aiogram.event - INFO - Update id=926862871 is handled. Duration 155 ms by bot id=7576088488
+2025-06-17 23:51:11,676 - aiogram.event - INFO - Update id=926862872 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 23:51:12,728 - aiogram.event - INFO - Update id=926862873 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:51:15,385 - aiogram.event - INFO - Update id=926862874 is handled. Duration 139 ms by bot id=7576088488
+2025-06-17 23:51:16,706 - aiogram.event - INFO - Update id=926862875 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:51:17,723 - aiogram.event - INFO - Update id=926862876 is handled. Duration 188 ms by bot id=7576088488
+2025-06-17 23:51:18,772 - aiogram.event - INFO - Update id=926862877 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:51:19,512 - aiogram.event - INFO - Update id=926862878 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:51:20,460 - aiogram.event - INFO - Update id=926862879 is handled. Duration 62 ms by bot id=7576088488
+2025-06-17 23:51:21,388 - aiogram.event - INFO - Update id=926862880 is handled. Duration 77 ms by bot id=7576088488
+2025-06-17 23:51:22,412 - aiogram.event - INFO - Update id=926862881 is handled. Duration 92 ms by bot id=7576088488
+2025-06-17 23:51:26,386 - aiogram.event - INFO - Update id=926862882 is handled. Duration 109 ms by bot id=7576088488
+2025-06-17 23:51:29,047 - aiogram.event - INFO - Update id=926862883 is handled. Duration 187 ms by bot id=7576088488
+2025-06-17 23:51:30,221 - aiogram.event - INFO - Update id=926862884 is handled. Duration 78 ms by bot id=7576088488
+2025-06-17 23:51:36,046 - aiogram.event - INFO - Update id=926862885 is handled. Duration 125 ms by bot id=7576088488
+2025-06-17 23:53:39,860 - aiogram.dispatcher - INFO - Polling stopped
+2025-06-17 23:53:39,860 - __main__ - INFO - Бот останавливается...
+2025-06-17 23:53:40,115 - aiogram.dispatcher - INFO - Polling stopped for bot @boredombot_bot id=7576088488 - 'boredom bot'
+2025-06-17 23:53:40,116 - __main__ - INFO - Бот остановлен пользователем
